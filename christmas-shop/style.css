@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  border: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*_____________Colors________________*/
+  --primary-color: #181c29;
+  --secondary-color: #ffffff;
+  --red-color: ##ff4646;
+  --red-bg: #ff46461a;
+
+  /*_____________Fonts_________________*/
+}
+
+h1 {
+  color: var(--primary-color);
+}

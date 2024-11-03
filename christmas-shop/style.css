@@ -5,18 +5,181 @@
   border: none;
   margin: 0;
   box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Montserrat";
 }
 
 :root {
-  /*_____________Colors________________*/
-  --primary-color: #181c29;
-  --secondary-color: #ffffff;
-  --red-color: ##ff4646;
-  --red-bg: #ff46461a;
+  /*_____________COLORS________________*/
+  --primary: #ff4646;
+  --dark: #181c29;
+  --static-white: #fff;
+  --content-background: #ecf3f8;
+  --tag-purple: #4361ff;
+  --tag-pink: #ff43f7;
+  --tag-green: #06a44f;
+  --primary-10: rgba(255, 70, 70, 0.1);
+  --static-white-20: rgba(255, 255, 255, 0.2);
+  --static-white-40: rgba(255, 255, 255, 0.4);
 
-  /*_____________Fonts_________________*/
+  /*_____________FONTS_________________*/
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Allura", sans-serif;
+  --third-family: "SF Pro", sans-serif;
+
+  /*_____________PADDINGS_________________*/
+  --Space-0: 0px;
+  --Space-8: 8px;
+  --Space-12: 12px;
+  --Space-20: 20px;
+  --Space-32: 32px;
+  --Space-60: 60px;
+  --Space-82: 82px;
+}
+
+body {
+  background-color: var(--static-white);
 }
 
 h1 {
+  align-self: stretch;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 0.174em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--static-white);
+}
+
+.header {
+  display: flex;
+  padding: var(--Space-0) var(--Space-82);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--Space-0);
+  align-self: stretch;
+}
+
+.navbar {
+  display: flex;
+  max-width: 1276px;
+  padding: var(--Space-12) var(--Space-0);
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--Space-12);
+  align-self: stretch;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  padding: var(--Space-8) var(--Space-20);
+  align-items: center;
+  gap: var(--Space-8);
+  text-decoration: none;
+}
+
+.logo__title {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 376px;
+  height: 40px;
+}
+
+.menu__item {
+  font-weight: 600;
+}
+
+.hero {
+  display: flex;
+  padding: var(--Space-60, 60px) var(--Space-8, 8px);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-0, 0px);
+  align-self: stretch;
+  width: 100%;
+  background: url(./img/bg-snow.png) top left / 100rem repeat,
+    url(./img/bg-ball.png) center / 90rem no-repeat, var(--primary);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.hero__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__content {
+  display: flex;
+  max-width: 426px;
+  padding: var(--Space-60) var(--Space-0);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-12);
+  align-self: stretch;
+}
+
+.hero__text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: var(--static-white);
+}
+
+.hero__button {
+  border-radius: 20px;
+  padding: 20px 32px;
+  width: 235px;
+  height: 56px;
   color: var(--primary-color);
+  background: var(--dark);
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.048em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--static-white);
+}
+
+/* .navbar {
+  max-width: 1440px;
+  margin: 0 auto;
+} */
+
+.about {
+  background: url(./img/bg-snow.png) top left / auto repeat,
+    url(./img/bg-ball.png) center / auto no-repeat, var(--primary);
+}
+
+.slider {
+  background: url(./img/bg-snow.png) top left / auto repeat,
+    url(./img/bg-ball.png) center / auto no-repeat, var(--primary);
+}
+
+.best-gifts {
+  background: url(./img/bg-snow.png) top left / auto repeat,
+    url(./img/bg-ball.png) center / auto no-repeat, var(--primary);
+}
+
+.cta {
+  background: url(./img/bg-snow.png) top left / auto repeat,
+    url(./img/bg-ball.png) center / auto no-repeat, var(--primary);
 }

@@ -97,7 +97,14 @@ h1 {
 }
 
 .menu__item {
+  /* Action Small */
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
   font-weight: 600;
+  line-height: 130%; /* 15.6px */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
 }
 
 .hero {

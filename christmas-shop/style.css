@@ -57,7 +57,7 @@ h1 {
   display: flex;
   padding: var(--Space-0) var(--Space-82);
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: var(--Space-0);
   align-self: stretch;
@@ -65,12 +65,11 @@ h1 {
 
 .navbar {
   display: flex;
+  width: 100%;
   max-width: 1276px;
   padding: var(--Space-12) var(--Space-0);
   justify-content: space-between;
-  align-items: center;
   gap: var(--Space-12);
-  align-self: stretch;
   text-decoration: none;
 }
 
@@ -110,7 +109,7 @@ h1 {
   align-self: stretch;
   width: 100%;
   background: url(./img/bg-snow.png) top left / 100rem repeat,
-    url(./img/bg-ball.png) center / 90rem no-repeat, var(--primary);
+    url(./img/bg-ball.png) center / 88rem no-repeat, var(--primary);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -159,27 +158,206 @@ h1 {
   color: var(--static-white);
 }
 
-/* .navbar {
-  max-width: 1440px;
-  margin: 0 auto;
-} */
-
 .about {
-  background: url(./img/bg-snow.png) top left / auto repeat,
-    url(./img/bg-ball.png) center / auto no-repeat, var(--primary);
+  display: flex;
+  padding: var(--Space-60, 60px) var(--Space-8, 8px);
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Space-0, 0px);
+  align-self: stretch;
+  background: url(./img/bg-snow.png) top left / 88rem repeat, var(--primary);
+}
+
+.about__inner {
+  display: flex;
+  max-width: 1276px;
+  padding: var(--Space-0, 0px);
+  align-items: center;
+  gap: var(--Space-0, 0px);
+  flex: 1 0 0;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.about__content {
+  display: flex;
+  padding: var(--Space-0, 0px) var(--Space-60, 60px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Space-0, 0px);
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.about__text {
+  display: flex;
+  max-width: 426px;
+  padding: var(--Space-60, 60px) var(--Space-0, 0px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Space-20, 20px);
+  align-self: stretch;
+}
+
+.about__subtitle {
+  color: var(--Primary, #ff4646);
+
+  font-family: "Allura";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 24px */
+  letter-spacing: 1.2px;
+}
+
+.about__title {
+  color: var(--Dark, #181c29);
+
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 152%; /* 36.48px */
+  letter-spacing: 3.84px;
+  text-transform: uppercase;
+}
+
+.about__message {
+  color: var(--Dark, #181c29);
+
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 148%; /* 23.68px */
+}
+
+.about__image {
+  border-radius: 20px;
 }
 
 .slider {
-  background: url(./img/bg-snow.png) top left / auto repeat,
-    url(./img/bg-ball.png) center / auto no-repeat, var(--primary);
+  background: url(./img/bg-snow.png) top left / 88rem repeat, var(--primary);
+  display: flex;
+  padding: var(--Space-60, 60px) var(--Space-8, 8px);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-0, 0px);
+  align-self: stretch;
+  margin: 0 auto;
+}
+
+.slider__inner {
+  display: flex;
+  padding: var(--Space-60, 60px) var(--Space-8, 8px);
+
+  max-width: 1276px;
+  /* padding: var(--Space-0, 0px); */
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-20, 20px);
+}
+
+.slider__content {
+  display: flex;
+  /* max-width: 426px; */
+  padding: var(--Space-0, 0px);
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-12, 12px);
+  align-self: stretch;
+}
+
+.slider__row {
+  display: flex;
+  max-width: 1276px;
+  padding: var(--Space-0, 0px);
+  align-items: center;
+}
+
+.slider__subtitle {
+  color: var(--Static-White, #fff);
+  text-align: center;
+
+  /* Caption */
+  font-family: "Allura";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 24px */
+  letter-spacing: 1.2px;
+}
+
+.slider__title {
+  color: var(--Static-White, #fff);
+  text-align: center;
+
+  /* Header 2 */
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 152%; /* 36.48px */
+  letter-spacing: 3.84px;
+  text-transform: uppercase;
+}
+
+.slider__text {
+  color: var(--Static-White, #fff);
+  text-align: center;
+
+  /* Slider Text */
+  font-family: "Montserrat";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.slider__image:nth-child(2),
+.slider__image:nth-child(4) {
+  border-radius: 20px;
+}
+
+.slider__image:nth-child(6) {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.slider__buttons {
+  width: 100%;
+  max-width: 1276px;
+  display: flex;
+  padding: var(--Space-0, 0px);
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--Space-20, 20px);
+  /* align-self: stretch; */
+}
+
+.slider__button {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  padding: var(--Space-0, 0px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-0, 0px);
+
+  border-radius: 20px;
+  border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.4));
+  background: lightgray 50% / cover no-repeat, var(--Primary, #ff4646);
 }
 
 .best-gifts {
-  background: url(./img/bg-snow.png) top left / auto repeat,
-    url(./img/bg-ball.png) center / auto no-repeat, var(--primary);
+  background: url(./img/bg-snow.png) top left / 88rem repeat, var(--primary);
 }
 
 .cta {
-  background: url(./img/bg-snow.png) top left / auto repeat,
-    url(./img/bg-ball.png) center / auto no-repeat, var(--primary);
+  background: url(./img/bg-snow.png) top left / 88rem repeat,
+    url(./img/bg-forest.png) center / 100rem no-repeat, var(--primary);
 }

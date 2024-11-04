@@ -97,7 +97,26 @@ h1 {
 }
 
 .menu__item {
+  /* Action Small */
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
   font-weight: 600;
+  line-height: 130%; /* 15.6px */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  display: flex;
+  padding: var(--Space-12, 12px) var(--Space-20, 20px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-0, 0px);
+  border-radius: 12px;
+}
+
+.menu__item:nth-child(1) {
+  background: var(--Primary-10, rgba(255, 70, 70, 0.1));
+  color: var(--Primary, #ff4646);
 }
 
 .gifts {

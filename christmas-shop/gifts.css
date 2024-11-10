@@ -41,10 +41,12 @@ body {
   background-color: var(--static-white);
 }
 
-.navbar,
-.gifts__inner,
-.footer__inner {
-  width: 1276px !important;
+.header,
+.gifts,
+.footer {
+  max-width: 1440px;
+  min-width: 1440px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -133,8 +135,6 @@ h1 {
 }
 
 .gifts {
-  max-width: 1440px;
-  margin: 0 auto;
   display: flex;
   padding: 60px 8px 59.5px 8px;
   flex-direction: column;

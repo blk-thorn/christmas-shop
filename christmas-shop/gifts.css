@@ -41,6 +41,12 @@ body {
   background-color: var(--static-white);
 }
 
+.navbar,
+.gifts__inner,
+.footer__inner {
+  width: 1276px !important;
+}
+
 h1 {
   align-self: stretch;
   font-family: var(--font-family);
@@ -75,16 +81,23 @@ h1 {
 
 .logo {
   display: flex;
-  padding: var(--Space-8) var(--Space-20);
+  padding: 8px 21px;
   align-items: center;
-  gap: var(--Space-8);
+  gap: 9px;
   text-decoration: none;
 }
 
 .logo__title {
-  text-decoration: none;
+  color: var(--Dark, #181c29);
+
+  /* Action Small */
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
   font-weight: 600;
-  color: var(--dark);
+  line-height: 130%; /* 15.6px */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
 }
 
 .menu {
@@ -120,14 +133,17 @@ h1 {
 }
 
 .gifts {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
-  padding: var(--Space-60, 60px) var(--Space-8, 8px);
+  padding: 60px 8px 59.5px 8px;
   flex-direction: column;
   align-items: center;
   gap: var(--Space-20, 20px);
   align-self: stretch;
   border-radius: 20px;
-  background: var(--Primary, #ff4646);
+  background: url(./img/bg-garland.png) top center / 90rem no-repeat,
+    var(--primary);
 }
 
 .gifts__title {
@@ -135,7 +151,7 @@ h1 {
   text-align: center;
 
   /* Header 1 */
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -149,7 +165,11 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--Space-12, 12px);
+  /* gap: var(--Space-12, 12px); */
+}
+
+.gifts__title--lastword {
+  padding-left: 5.7px;
 }
 
 .gifts__inner {
@@ -214,7 +234,7 @@ h1 {
 
 .card__list {
   display: flex;
-  padding: var(--Space-0, 0px);
+  padding: 0.5px 0px;
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
@@ -237,9 +257,15 @@ h1 {
 }
 
 .image__container {
+  max-height: 230px;
   background: 50% / cover no-repeat;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.card__image {
+  flex: 1 0 0;
+  align-self: stretch;
 }
 
 .text__container {
@@ -247,7 +273,7 @@ h1 {
   padding: var(--Space-20, 20px);
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--Space-8, 8px);
+  gap: 9px;
   flex: 1 0 0;
   align-self: stretch;
 
@@ -312,14 +338,14 @@ h1 {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 152%; /* 24.32px */
+  line-height: 148%;
   letter-spacing: 1.28px;
   text-transform: uppercase;
 }
 
 .footer {
   display: flex;
-  padding: var(--Space-60, 60px) var(--Space-8, 8px);
+  padding: 59.5px 8px 60px 8px;
   flex-direction: column;
   align-items: center;
   gap: var(--Space-0, 0px);
@@ -331,7 +357,7 @@ h1 {
   display: flex;
   width: 100%;
   max-width: 1276px;
-  padding: var(--Space-0, 0px);
+  /* padding: 60px 0px; */
   flex-direction: column;
   align-items: center;
   gap: var(--Space-60, 60px);
@@ -349,7 +375,7 @@ h1 {
 
 .contact__item {
   display: flex;
-  padding: var(--Space-20, 20px);
+  padding: 20.5px 20px 20px 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -362,6 +388,7 @@ h1 {
 .contact__link {
   color: var(--Dark, #181c29);
   text-align: center;
+  padding-left: 4px;
 
   /* Action Large */
   font-family: "Montserrat";
@@ -414,7 +441,7 @@ h1 {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 148%; /* 23.68px */
+  line-height: 300%;
 }
 
 .footer__text {

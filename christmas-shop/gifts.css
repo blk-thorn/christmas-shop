@@ -53,18 +53,6 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  align-self: stretch;
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 150%;
-  letter-spacing: 0.174em;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--static-white);
-}
-
 .header {
   display: flex;
   padding: var(--Space-0) var(--Space-82);
@@ -254,6 +242,10 @@ h1 {
   cursor: pointer;
   background: var(--Static-White-20, rgba(255, 255, 255, 0.2));
   color: var(--Static-White, #fff);
+}
+
+.gifts__item:nth-child(1):hover {
+  cursor: default;
 }
 
 .card__list {

@@ -37,6 +37,10 @@
   --Space-82: 82px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--static-white);
 }
@@ -113,14 +117,19 @@ body {
   list-style: none;
   width: 376px;
   height: 40px;
-  padding: 0px 20px;
-  align-items: center;
+  /* padding: 0px 20px; */
   gap: var(--Space-8, 8px);
   align-self: stretch;
 }
 
 .menu__item {
+  display: flex;
+  border-radius: 12px;
   color: var(--Dark, #181c29);
+  padding: var(--Space-12, 12px) var(--Space-20, 20px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-0, 0px);
 
   /* Action Small */
   font-family: "Montserrat";
@@ -130,6 +139,14 @@ body {
   line-height: 130%; /* 15.6px */
   letter-spacing: 0.6px;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__item:hover {
+  cursor: pointer;
+  border-radius: 12px;
+  background: var(--Primary-10, rgba(255, 70, 70, 0.1));
+  color: var(--Primary, #ff4646);
 }
 
 .hero {
@@ -218,6 +235,13 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: var(--static-white);
+  transition: all 0.4s ease-in-out;
+}
+
+.hero__button:hover {
+  cursor: pointer;
+  color: var(--dark);
+  background: var(--Static-White, #fff);
 }
 
 .about {
@@ -414,7 +438,20 @@ body {
   border-radius: 20px;
   border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.4));
   background: lightgray 50% / cover no-repeat, var(--Primary, #ff4646);
+  transition: all 0.3s ease-in-out;
 }
+
+.slider__button:hover {
+  cursor: pointer;
+  border: 1px solid var(--Static-White, #fff);
+  background: var(--Static-White, #fff);
+}
+
+.slider__button:hover .slider__button--icon {
+  stroke: var(--primary);
+  stroke-opacity: 1;
+}
+
 .slider__button--right {
   border-radius: 20px;
   border: 1px solid var(--Static-White, #fff);
@@ -490,6 +527,14 @@ body {
 
   border-radius: 20px;
   background: var(--Content-Background, #ecf3f8);
+}
+
+.card__item:hover {
+  cursor: pointer;
+}
+
+.card__item:hover .card__title {
+  color: var(--primary);
 }
 
 .image__container {
@@ -568,6 +613,7 @@ body {
   line-height: 149%;
   letter-spacing: 1.28px;
   text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
 }
 
 .cta {
@@ -651,6 +697,13 @@ body {
   line-height: 130%; /* 15.6px */
   letter-spacing: 0.6px;
   text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+}
+
+.cta__button:hover {
+  cursor: pointer;
+  color: var(--dark);
+  background: var(--Static-White, #fff);
 }
 
 .timer {
@@ -742,6 +795,17 @@ body {
   flex: 1 0 0;
   border-radius: 20px;
   background: var(--Content-Background, #ecf3f8);
+  transition: color 0.3s ease-in-out;
+}
+
+.contact__item:hover {
+  cursor: pointer;
+  color: var(--Primary, #ff4646);
+}
+
+.contact__item:hover .contact__link,
+.contact__item:hover .contact__text {
+  color: var(--Primary, #ff4646);
 }
 
 .contact__link {
@@ -758,6 +822,7 @@ body {
   letter-spacing: 3.84px;
   text-transform: uppercase;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
 .contact__text {
@@ -772,6 +837,7 @@ body {
   line-height: 152%; /* 24.32px */
   letter-spacing: 1.28px;
   text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
 }
 
 .socials__list {
@@ -789,6 +855,21 @@ body {
   justify-content: center;
   align-items: center;
   gap: var(--Space-0, 0px);
+  transition: all 0.3s ease-in-out;
+}
+
+.socials__item:hover {
+  cursor: pointer;
+  color: var(--Primary, #ff4646);
+}
+
+.socials__item--svg {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.socials__item:hover .socials__item--svg {
+  stroke: var(--Primary, #ff4646);
+  transition: stroke 0.3s ease-in-out;
 }
 
 .copyright {
@@ -804,14 +885,28 @@ body {
 }
 
 .footer__text {
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__text--link {
+  text-decoration: none;
   color: var(--Dark, #181c29);
   text-align: center;
 
-  /* Caption */
   font-family: "Allura";
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 24px */
   letter-spacing: 1.2px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__text--link:hover {
+  cursor: pointer;
+  color: var(--Primary, #ff4646);
+}
+
+.footer__text:hover {
+  color: var(--Primary, #ff4646);
 }

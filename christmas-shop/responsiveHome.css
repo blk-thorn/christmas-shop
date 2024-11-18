@@ -56,8 +56,7 @@
     align-items: flex-start;
     gap: var(--Space-20, 20px);
     align-self: stretch;
-    /* Создаём контекст наложения для текста */
-    z-index: 2; /* Устанавливаем z-index ниже, чем для изображения */
+    z-index: 2;
     background: #fff;
   }
 
@@ -69,7 +68,7 @@
     right: 0;
     max-width: 482px;
     max-height: 528px;
-    z-index: 1; /* Устанавливаем z-index выше, чтобы элемент перекрывал текст */
+    z-index: 1;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }

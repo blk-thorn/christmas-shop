@@ -481,6 +481,12 @@ body {
   transition: stroke 0.4s ease-in-out;
 }
 
+.socials__item .socials__item--link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .copyright {
   color: var(--Dark, #181c29);
   text-align: center;

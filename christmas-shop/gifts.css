@@ -45,13 +45,13 @@ body {
   background-color: var(--static-white);
 }
 
-.header,
+/* .header,
 .gifts,
 .footer {
   max-width: 1440px;
   min-width: 1440px;
   margin: 0 auto;
-}
+} */
 
 .header {
   display: flex;

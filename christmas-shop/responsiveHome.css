@@ -1,0 +1,178 @@
+@media (min-width: 769px) and (max-width: 1339px) {
+  .header {
+    display: flex;
+    padding: 0px 82px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Space-0);
+    align-self: stretch;
+  }
+
+  .navbar {
+    display: flex;
+    width: 100%;
+    max-width: 1276px;
+    padding: 12px 0px;
+    justify-content: space-between;
+    gap: var(--Space-12);
+    text-decoration: none;
+  }
+  .contact__link {
+    letter-spacing: 2.84px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about__inner {
+    display: flex;
+    overflow: hidden;
+    max-width: 1276px;
+    padding: var(--Space-0, 0px);
+    align-items: center;
+    gap: var(--Space-0, 0px);
+    flex: 1 0 0;
+  }
+
+  .about__content {
+    display: flex;
+    min-width: 376px;
+    padding: var(--Space-0, 0px) var(--Space-60, 60px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--Space-0, 0px);
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+
+  .about__text {
+    display: flex;
+    max-width: 256px;
+    min-height: 528px;
+    padding: var(--Space-60, 60px) var(--Space-0, 0px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--Space-20, 20px);
+    align-self: stretch;
+    /* Создаём контекст наложения для текста */
+    z-index: 2; /* Устанавливаем z-index ниже, чем для изображения */
+    background: #fff;
+  }
+
+  .about__image-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    /* position: absolute; */
+    right: 0;
+    max-width: 482px;
+    max-height: 528px;
+    z-index: 1; /* Устанавливаем z-index выше, чтобы элемент перекрывал текст */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .about__image {
+    position: relative;
+    z-index: 0;
+  }
+
+  .slider {
+    background: url(./img/bg-snow.png) center top / 73.2rem repeat,
+      var(--primary);
+  }
+
+  .contact__list {
+    flex-direction: column;
+  }
+
+  .contact__item {
+    width: 100%;
+  }
+
+  .best-gifts__inner {
+    padding: 61px 0px 60px 0px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 768px) {
+  .header {
+    padding: 0px 8px;
+  }
+
+  .menu__list {
+    display: none;
+  }
+  .burger {
+    display: flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: var(--Space-0, 0px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Space-8, 8px);
+    cursor: pointer;
+  }
+
+  .burger__line {
+    display: inline-block;
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    left: 9.5px;
+    top: 15px;
+    background-color: var(--Dark, #181c29);
+  }
+
+  .burger::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 21px;
+    height: 2px;
+    left: 9.5px;
+    top: calc(60% - 1px);
+    background-color: var(--Dark, #181c29);
+  }
+
+  .hero {
+    background: url(./img/bg-snow.png) center / 78.5rem repeat,
+      url(./img/bg-ball.png) center / 78rem no-repeat, var(--primary);
+  }
+
+  .slider__row {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    max-width: 768px;
+    padding: 0px 8px;
+    align-items: center;
+    gap: 20.5px;
+  }
+
+  .slider__item {
+    display: flex;
+    justify-items: left;
+  }
+
+  .slider__buttons {
+    max-width: 768px;
+    padding: 0px 8px;
+  }
+
+  .slider__text {
+    padding-bottom: 0px;
+  }
+
+  .contact__list {
+    flex-direction: column;
+  }
+
+  .contact__item {
+    width: 100%;
+  }
+}

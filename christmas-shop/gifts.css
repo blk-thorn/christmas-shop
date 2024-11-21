@@ -139,6 +139,11 @@ body {
   cursor: default;
 }
 
+.burger,
+.burger__line {
+  display: none;
+}
+
 .gifts {
   display: flex;
   padding: 60px 8px 59.5px 8px;

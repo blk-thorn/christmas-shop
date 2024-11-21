@@ -1,0 +1,205 @@
+@media (min-width: 769px) and (max-width: 1339px) {
+  .header {
+    display: flex;
+    padding: 0px 82px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Space-0);
+    align-self: stretch;
+  }
+
+  .navbar {
+    display: flex;
+    width: 100%;
+    max-width: 1276px;
+    padding: 12px 0px;
+    justify-content: space-between;
+    gap: var(--Space-12);
+    text-decoration: none;
+  }
+  .contact__link {
+    letter-spacing: 2.84px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact__list {
+    flex-direction: column;
+  }
+
+  .contact__item {
+    width: 100%;
+  }
+
+  .best-gifts__inner {
+    padding: 61px 0px 60px 0px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 768px) {
+  .header {
+    padding: 0px 8px;
+  }
+
+  .menu__list {
+    display: none;
+  }
+  .burger {
+    display: flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: var(--Space-0, 0px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Space-8, 8px);
+    cursor: pointer;
+  }
+
+  .burger__line {
+    display: inline-block;
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    left: 9.5px;
+    top: 15px;
+    background-color: var(--Dark, #181c29);
+  }
+
+  .burger::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 21px;
+    height: 2px;
+    left: 9.5px;
+    top: calc(60% - 1px);
+    background-color: var(--Dark, #181c29);
+  }
+
+  .contact__list {
+    flex-direction: column;
+  }
+
+  .contact__item {
+    width: 100%;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 768px) {
+  .gifts {
+    background: url(./img/bg-garland.png) top center / 48.6rem no-repeat,
+      var(--primary);
+  }
+
+  .gifts__list {
+    gap: clamp(0rem, -0.4922rem + 2.0672vw, 0.5rem);
+  }
+
+  .gifts__item {
+    text-wrap: nowrap;
+    padding: 12px clamp(0.5rem, -0.2384rem + 3.1008vw, 1.25rem);
+  }
+}
+
+@media (min-width: 160px) and (max-width: 380px) {
+  .gifts {
+    background: url(./img/bg-garland.png) top center / 23.9rem no-repeat,
+      var(--primary);
+  }
+}
+
+@media (min-width: 160px) and (max-width: 380px) {
+  .header {
+    padding: 0px 8px;
+  }
+
+  .menu__list {
+    display: none;
+  }
+  .burger {
+    display: flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: var(--Space-0, 0px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Space-8, 8px);
+    cursor: pointer;
+  }
+
+  .burger__line {
+    display: inline-block;
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    left: 9.5px;
+    top: 15px;
+    background-color: var(--Dark, #181c29);
+  }
+
+  .burger::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 21px;
+    height: 2px;
+    left: 9.5px;
+    top: calc(60% - 1px);
+    background-color: var(--Dark, #181c29);
+  }
+
+  .gifts__list {
+    gap: 0px;
+  }
+  .gifts__item {
+    text-wrap: nowrap;
+    display: flex;
+    padding: var(--Space-12, 12px)
+      clamp(0.125rem, -0.1477rem + 2.7273vw, 0.5rem);
+    justify-content: center;
+    align-items: center;
+    gap: var(--Space-0, 0px);
+
+    color: var(--Static-White, #fff);
+
+    /* Action Small */
+    font-family: "Montserrat";
+    font-size: clamp(0.5rem, 0.3182rem + 1.8182vw, 0.75rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 15.6px */
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  .gifts__item:nth-child(1) {
+    display: flex;
+    padding: var(--Space-12, 12px) var(--Space-8, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--Space-0, 0px);
+    color: var(--Static-White, #fff);
+
+    /* Action Small */
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 15.6px */
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  .contact__list {
+    flex-direction: column;
+  }
+
+  .contact__item {
+    width: 100%;
+  }
+}

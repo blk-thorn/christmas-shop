@@ -55,7 +55,11 @@ body {
   max-width: 1440px;
   /* min-width: 1440px; */
   margin: 0 auto;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
+}
+
+.slider__inner {
+  overflow: hidden;
 }
 
 /* h1 {
@@ -365,11 +369,13 @@ body {
 .slider__row {
   display: flex;
   list-style: none;
-  max-width: 1276px;
+  /* max-width: 1276px; */
   width: 100%;
+  padding-left: 6%;
   align-items: center;
   text-align: left;
   gap: 20.3px;
+  justify-content: flex-start;
 }
 
 .slider__subtitle {
@@ -428,7 +434,7 @@ body {
   width: 100%;
   max-width: 1276px;
   display: flex;
-  padding: var(--Space-0, 0px);
+  padding: 0px;
   justify-content: flex-end;
   align-items: center;
   gap: var(--Space-20, 20px);
@@ -472,6 +478,7 @@ body {
 
 .best-gifts__inner {
   display: flex;
+  justify-content: center;
   /* max-width: 426px; */
   padding: 57px 0px 60px 0px;
   flex-direction: column;

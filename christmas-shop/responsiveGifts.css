@@ -202,4 +202,8 @@
   .contact__item {
     width: 100%;
   }
+
+  .copyright {
+    line-height: 258%;
+  }
 }

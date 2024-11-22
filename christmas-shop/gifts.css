@@ -501,8 +501,8 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  /* line-height: 270%; */
-  line-height: 300%;
+  line-height: 270%;
+  /* line-height: 300%; */
 }
 
 .footer__text {

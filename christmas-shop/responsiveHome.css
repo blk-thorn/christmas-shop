@@ -18,16 +18,25 @@
     gap: var(--Space-12);
     text-decoration: none;
   }
+
+  .hero {
+    background: url(./img/bg-snow.png) center / 90rem no-repeat,
+      url(./img/bg-ball.png) center /
+        clamp(78rem, 56.3776rem + 35.7764vw, 85.2rem) no-repeat,
+      var(--primary);
+  }
+
   .contact__link {
     letter-spacing: 2.84px;
   }
 }
 
-/* @media screen and (max-width: 1289) {
-  .best-gifts__inner {
-   
+@media (min-width: 768px) and (max-width: 1289px) {
+  .card__list {
+    margin: 0 auto;
+    max-width: 967px;
   }
-} */
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .about__inner {
@@ -97,8 +106,25 @@
     width: 100%;
   }
 
+  .best-gifts {
+    background: url(./img/bg-snow.png) center calc(100% - 5px) / 136.5rem repeat,
+      var(--primary);
+  }
   .best-gifts__inner {
     padding: 61px 0px 60px 0px;
+  }
+
+  .slider__inner {
+    gap: 19.2px;
+  }
+
+  .slider__title {
+    padding-bottom: 0;
+  }
+
+  .copyright {
+    /* line-height: 258%; */
+    line-height: 285%;
   }
 }
 
@@ -146,7 +172,7 @@
 
   .hero {
     background: url(./img/bg-snow.png) center / 78.5rem repeat,
-      url(./img/bg-ball.png) center / 78rem no-repeat, var(--primary);
+      url(./img/bg-ball.png) top / 78rem no-repeat, var(--primary);
   }
 
   .slider__row {
@@ -269,8 +295,8 @@
   }
 
   .hero {
-    background: url(./img/bg-snow.png) center / 78.5rem repeat,
-      url(./img/bg-ball.png) center / 85.2rem no-repeat, var(--primary);
+    background: url(./img/bg-snow.png) center / 85.5rem no-repeat,
+      url(./img/bg-ball.png) top / 85.2rem no-repeat, var(--primary);
   }
 
   .about__inner {
@@ -303,6 +329,19 @@
     padding: 61.5px 0px 60px 0px;
   }
 
+  .slider {
+    background: url(./img/bg-snow.png) center calc(100% + 2px) / 73.4rem repeat,
+      var(--primary);
+  }
+
+  .slider__inner {
+    gap: 19.2px;
+  }
+
+  .slider__title {
+    padding-bottom: 0;
+  }
+
   .cta {
     background: url(./img/bg-snow.png) center calc(100% + 3px) / 106.1rem repeat,
       url(./img/bg-forest.png) center 92.5% / 95rem no-repeat, var(--primary);
@@ -323,5 +362,9 @@
 
   .contact__item {
     width: 100%;
+  }
+
+  .copyright {
+    line-height: 290%;
   }
 }

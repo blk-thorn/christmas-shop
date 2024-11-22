@@ -53,7 +53,6 @@ body {
 .cta,
 .footer {
   max-width: 1440px;
-  /* min-width: 1440px; */
   margin: 0 auto;
   /* overflow-y: hidden; */
 }
@@ -61,18 +60,6 @@ body {
 .slider__inner {
   overflow: hidden;
 }
-
-/* h1 {
-  align-self: stretch;
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 150%;
-  letter-spacing: 0.174em;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--static-white);
-} */
 
 .header {
   display: flex;

@@ -7,6 +7,7 @@
     <title>Christmas Shop</title>
     <link href="./fonts/fonts.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsiveHome.css">
     <link rel="icon" href="./img/image3.png">
 </head>
 
@@ -28,6 +29,9 @@
                 <li class="menu__item" onclick="location.href='#best-gifts'">BEST</li>
                 <li class="menu__item" onclick="location.href='#contacts'">CONTACTS</li>
             </ul>
+            <span class="burger">
+                <span class="burger__line"></span>
+            </span>
         </nav>
     </header>
     <main class="main">
@@ -55,7 +59,9 @@
                             We offer unique gifts that will help you improve your life.</p>
                     </div>
                 </div>
-                <img src="./img/santa.png" alt="" class="about__image">
+                <div class="about__image-container">
+                    <img src="./img/santa.png" alt="" class="about__image">
+                </div>
             </div>
         </section>
         <section class="slider">
@@ -64,14 +70,20 @@
                     <p class="slider__subtitle">Become Happier!</p>
                     <h2 class="slider__title">IN THE NEW 2025</h2>
                 </div>
-                <div class="slider__row">
-                    <p class="slider__text">LIVE</p>
-                    <img src="./img/snowman.png" alt="" class="slider__image">
-                    <p class="slider__text">CREATE</p>
-                    <img src="./img/christmas-trees.png" alt="" class="slider__image">
-                    <p class="slider__text">LOVE</p>
-                    <img src="./img/christmas-tree-ball.png" alt="" class="slider__image">
-                </div>
+                <ul class="slide__list slider__row">
+                    <li class="slider__item">
+                        <p class="slider__text">LIVE</p>
+                    </li>
+                    <li class="slider__item"><img src="./img/snowman.png" alt="" class="slider__image"></li>
+                    <li class="slider__item">
+                        <p class="slider__text">CREATE</p>
+                    </li>
+                    <li class="slider__item"><img src="./img/christmas-trees.png" alt="" class="slider__image"></li>
+                    <li class="slider__item">
+                        <p class="slider__text">LOVE</p>
+                    </li>
+                    <li class="slider__item"><img src="./img/christmas-tree-ball.png" alt="" class="slider__image"></li>
+                </ul>
                 <div class="slider__buttons">
                     <button class="slider__button slider__button--left">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

@@ -53,8 +53,13 @@ body {
 .cta,
 .footer {
   max-width: 1440px;
-  min-width: 1440px;
+  /* min-width: 1440px; */
   margin: 0 auto;
+  /* overflow-y: hidden; */
+}
+
+.slider__inner {
+  overflow: hidden;
 }
 
 /* h1 {
@@ -147,6 +152,11 @@ body {
   border-radius: 12px;
   background: var(--Primary-10, rgba(255, 70, 70, 0.1));
   color: var(--Primary, #ff4646);
+}
+
+.burger,
+.burger__line {
+  display: none;
 }
 
 .hero {
@@ -322,10 +332,11 @@ body {
 
 .about__image {
   border-radius: 20px;
+  display: block;
 }
 
 .slider {
-  background: url(./img/bg-snow.png) center calc(100% + 55px) / 90rem repeat,
+  background: url(./img/bg-snow.png) center calc(100% + 52px) / 90rem repeat,
     var(--primary);
   display: flex;
   flex-direction: column;
@@ -338,17 +349,16 @@ body {
 .slider__inner {
   display: flex;
   padding: 60.5px 0px 60px 0px;
-
+  width: 100%;
   /* max-width: 1276px; */
   /* padding: var(--Space-0, 0px); */
   flex-direction: column;
   align-items: center;
-  gap: 19.2px;
+  gap: 16.5px;
 }
 
 .slider__content {
   display: flex;
-  /* max-width: 426px; */
   padding: var(--Space-0, 0px);
   flex-direction: column;
   align-items: center;
@@ -358,10 +368,14 @@ body {
 
 .slider__row {
   display: flex;
-  max-width: 1276px;
+  list-style: none;
+  /* max-width: 1276px; */
+  width: 100%;
+  padding-left: 5.13rem;
   align-items: center;
   text-align: left;
   gap: 20.3px;
+  justify-content: flex-start;
 }
 
 .slider__subtitle {
@@ -390,11 +404,13 @@ body {
   line-height: 152%; /* 36.48px */
   letter-spacing: 3.84px;
   text-transform: uppercase;
+  padding-bottom: 2.7px;
 }
 
 .slider__text {
   color: var(--Static-White, #fff);
   text-align: center;
+  padding-bottom: 4px;
 
   /* Slider Text */
   font-family: "Montserrat";
@@ -405,12 +421,12 @@ body {
   text-transform: uppercase;
 }
 
-.slider__image:nth-child(2),
-.slider__image:nth-child(4) {
+.slider__item:nth-child(2) .slider__image,
+.slider__item:nth-child(4) .slider__image {
   border-radius: 20px;
 }
 
-.slider__image:nth-child(6) {
+.slider__item:nth-child(6) .slider__image {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -419,10 +435,11 @@ body {
   width: 100%;
   max-width: 1276px;
   display: flex;
-  padding: var(--Space-0, 0px);
+  padding: 0px;
   justify-content: flex-end;
   align-items: center;
   gap: var(--Space-20, 20px);
+  padding-bottom: 3px;
   /* align-self: stretch; */
 }
 
@@ -463,8 +480,9 @@ body {
 
 .best-gifts__inner {
   display: flex;
+  justify-content: center;
   /* max-width: 426px; */
-  padding: 61px 0px 60px 0px;
+  padding: 57px 0px 60px 0px;
   flex-direction: column;
   align-items: center;
   gap: 12px;
@@ -897,7 +915,8 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 300%;
+  line-height: 270%;
+  /* line-height: 300%; */
 }
 
 .footer__text {

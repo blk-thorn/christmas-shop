@@ -45,13 +45,13 @@ body {
   background-color: var(--static-white);
 }
 
-.header,
+/* .header,
 .gifts,
 .footer {
   max-width: 1440px;
   min-width: 1440px;
   margin: 0 auto;
-}
+} */
 
 .header {
   display: flex;
@@ -137,6 +137,11 @@ body {
   background: var(--Primary-10, rgba(255, 70, 70, 0.1));
   color: var(--Primary, #ff4646);
   cursor: default;
+}
+
+.burger,
+.burger__line {
+  display: none;
 }
 
 .gifts {
@@ -496,7 +501,8 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 300%;
+  line-height: 270%;
+  /* line-height: 300%; */
 }
 
 .footer__text {

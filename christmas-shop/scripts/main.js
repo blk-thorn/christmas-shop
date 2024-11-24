@@ -1,3 +1,5 @@
+import { renderCards } from "./renderJson.js";
+
 
 const menu = document.querySelector('.menu__list');
 const burgerBtn = document.querySelector('.burger');
@@ -5,7 +7,7 @@ const burgerLine = document.querySelector('.burger__line')
 const body = document.body;
 
 if (menu && burgerBtn) {
-	burgerBtn.addEventListener('click', e => {
+	burgerBtn.addEventListener('click', () => {
 		menu.classList.toggle('menu__list--active');
 		burgerBtn.classList.toggle('burger--active');
         burgerLine.classList.toggle('burger__line--active')
@@ -47,3 +49,10 @@ body.addEventListener('click', (event) => {
    burgerLine.classList.remove('burger__line--active');
    body.classList.remove('noscroll');
 });
+
+
+
+
+
+
+

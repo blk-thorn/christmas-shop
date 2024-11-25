@@ -2,7 +2,7 @@ import { renderCards } from "./renderJson.js";
 
 const cardList = document.querySelector(".card__list");
 const body = document.body;
-const giftCard = document.querySelectorAll(".card__item"); 
+ 
 
 let isModalOpen = false;
 let currentModal = null; 
@@ -49,10 +49,9 @@ renderCards().then(cards => {
 
         if (modalBtnElement) {
             const name = modalBtnElement.dataset.modalBtn;
-            const modal = document.querySelector(`[data-modal-window='${name}']`);
 
             if (!isModalOpen) {
-                createModal(newArr[index], modal); // Используем имя для создания модального окна
+                createModal(newArr[index], name); // Используем имя для создания модального окна
                 body.classList.add("no-scroll");
             } else {
                 console.log("Modal is opened");
@@ -85,6 +84,12 @@ function setupCloseButton(closeButton) {
         closeModal();
     });
 }
+window.onclick = function (e) {
+    if (e.target.classList.contains("modal__button")||
+        e.target.hasAttribute("data-modal-window")) {
+            closeModal();
+    }
+};
 
 
  function createCard (card, index) {
@@ -254,7 +259,7 @@ function createModalList (key, value) {
     for (let i = 0; i < 5; i++) {
         const opacityValue = (i < superpowersValue) ? 1 : 0.1;
 
-        const snowflakeItem = createSnowflakesList(key, value, opacityValue);
+        const snowflakeItem = createSnowflakesList(opacityValue);
         snowflakesList.appendChild(snowflakeItem);
     }
       
@@ -266,7 +271,7 @@ function createModalList (key, value) {
   
 }
 
-function createSnowflakesList(key, value, opacityValue) {
+function createSnowflakesList(opacityValue) {
     const snowflakeItem = document.createElement("li");
     snowflakeItem.classList.add("snowflake__item");
 
@@ -277,11 +282,6 @@ function createSnowflakesList(key, value, opacityValue) {
     <defs><clipPath id="clip0_8129_58"><rect width="16" height="16" fill="white"/></clipPath></defs>
     </svg>
     `;
-    
-    for (let i = 0; i < superpowersValue; i++) {
-        snowflakeItem.style.fillOpacity = "1";
-    
-    }
     
     return snowflakeItem;
 }

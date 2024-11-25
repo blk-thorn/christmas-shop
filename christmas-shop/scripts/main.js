@@ -1,4 +1,4 @@
-import { renderCards } from "./renderJson.js";
+import {renderCards}  from "./renderJson.js";
 
 
 const menu = document.querySelector('.menu__list');
@@ -50,18 +50,4 @@ body.addEventListener('click', (event) => {
    body.classList.remove('noscroll');
 });
 
-
-// const scrollTopBtn = document.querySelector(".scroll-top")
-// window.addEventListener("scroll", trackScroll);
-
-
-// function trackScroll() {
-// 	const offset = window.scrollY;
-// 	const windowHeight = document.documentElement.clientHeight;
-// 	if(offset > windowHeight) {
-// 		scrollTopBtn.classList.add("scroll-top--active");
-// 	} else {
-// 		scrollTopBtn.classList.remove("scroll-top--active");
-// 	}
-// }
 

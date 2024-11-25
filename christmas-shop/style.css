@@ -45,6 +45,10 @@ body {
   background-color: var(--static-white);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .header,
 .hero,
 .about,
@@ -90,7 +94,7 @@ body {
 }
 
 .logo__title {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
 
   /* Action Small */
   font-family: Montserrat;
@@ -117,7 +121,7 @@ body {
 .menu__item {
   display: flex;
   border-radius: 12px;
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   padding: var(--Space-12, 12px) var(--Space-20, 20px);
   justify-content: center;
   align-items: center;
@@ -137,8 +141,8 @@ body {
 .menu__item:hover {
   cursor: pointer;
   border-radius: 12px;
-  background: var(--Primary-10, rgba(255, 70, 70, 0.1));
-  color: var(--Primary, #ff4646);
+  background: var(--primary-10);
+  color: var(--primary);
 }
 
 .burger,
@@ -188,7 +192,7 @@ body {
 } */
 
 .hero__title {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
 
   /* Header 1 */
@@ -221,7 +225,7 @@ body {
   padding: 20px 32px;
   width: 235px;
   height: 56px;
-  color: var(--primary-color);
+  color: var(--primary);
   background: var(--dark);
 
   font-family: var(--font-family);
@@ -238,7 +242,7 @@ body {
 .hero__button:hover {
   cursor: pointer;
   color: var(--dark);
-  background: var(--Static-White, #fff);
+  background: var(--static-white);
 }
 
 .about {
@@ -285,7 +289,7 @@ body {
 }
 
 .about__subtitle {
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 
   font-family: "Allura";
   font-size: 24px;
@@ -296,7 +300,7 @@ body {
 }
 
 .about__title {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
 
   font-family: "Montserrat";
   font-size: 24px;
@@ -308,7 +312,7 @@ body {
 }
 
 .about__message {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
 
   font-family: "Montserrat";
   font-size: 16px;
@@ -366,7 +370,7 @@ body {
 }
 
 .slider__subtitle {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
 
   /* Caption */
@@ -379,7 +383,7 @@ body {
 }
 
 .slider__title {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
   padding-left: 4px;
 
@@ -395,7 +399,7 @@ body {
 }
 
 .slider__text {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
   padding-bottom: 4px;
 
@@ -440,15 +444,15 @@ body {
   gap: var(--Space-0, 0px);
 
   border-radius: 20px;
-  border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.4));
-  background: lightgray 50% / cover no-repeat, var(--Primary, #ff4646);
+  border: 1px solid var(--static-white-40);
+  background: lightgray 50% / cover no-repeat, var(--primary);
   transition: all 0.3s ease-in-out;
 }
 
 .slider__button--right:hover {
   cursor: pointer;
-  border: 1px solid var(--Static-White, #fff);
-  background: var(--Static-White, #fff);
+  border: 1px solid var(--static-white);
+  background: var(--static-white);
 }
 
 .slider__button--right:hover .slider__button--icon {
@@ -458,7 +462,7 @@ body {
 
 .slider__button--right {
   border-radius: 20px;
-  border: 1px solid var(--Static-White, #fff);
+  border: 1px solid var(--static-white);
 }
 .best-gifts {
   background: url(./img/bg-snow.png) center calc(100% + 16px) / 90rem repeat,
@@ -477,7 +481,7 @@ body {
 }
 
 .best-gifts__subtitle {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
   padding-left: 1px;
 
@@ -491,7 +495,7 @@ body {
 }
 
 .best-gifts__title {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
   padding-left: 3.8px;
 
@@ -531,7 +535,7 @@ body {
   gap: var(--Space-0, 0px);
 
   border-radius: 20px;
-  background: var(--Content-Background, #ecf3f8);
+  background: var(--content-background);
 }
 
 .card__item:hover {
@@ -563,7 +567,7 @@ body {
   flex: 1 0 0;
   align-self: stretch;
   border-radius: 20px;
-  background: var(--Static-White, #fff);
+  background: var(--static-white);
 }
 
 .card__subtitle {
@@ -577,43 +581,121 @@ body {
   text-transform: uppercase;
 }
 
-/* .card__item:nth-child(1) .card__subtitle,
-.card__item:nth-child(3) .card__subtitle {
-  color: var(--Tag-Purple, #4361ff);
-  font-family: "Montserrat";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 130%;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  /* display:flex; */
+  align-items: center;
+  justify-content: center;
+  top: 20%;
+  left: 0px;
+  width: 100vw;
+  height: auto;
+  background: rgba(24, 28, 41, 0.8);
+  box-shadow: 500vh -500vh 2px 1000vh rgba(24, 28, 41, 0.8);
+  z-index: 999;
+  box-sizing: unset;
 }
-.card__item:nth-child(2) .card__subtitle {
-  color: var(--Tag-Green, #06a44f);
-  font-family: "Montserrat";
+
+.modal__inner {
+  display: flex;
+  padding: var(--Space-20, 20px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-20, 20px);
+  align-self: stretch;
+}
+
+.modal__card {
+  position: relative;
+  display: flex;
+  width: 25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1 0 0; */
+  border-radius: var(--Space-20, 20px);
+  background: var(--content-background);
+}
+
+.modal__button {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #ffffff00;
+}
+
+.modal__button-path {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.modal__button:hover .modal__button-path {
+  stroke: var(--primary);
+}
+
+.modal__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.modal__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  padding: var(--Space-0, 0px);
+  align-items: center;
+  gap: var(--Space-12, 12px);
+  align-self: stretch;
+}
+
+.modal__card:hover .card__title {
+  color: var(--primary);
+}
+
+.modal__text {
+  flex: 1 0 0;
+}
+
+.modal__title {
+  color: var(--dark);
+
+  /* Header 4 */
+  font-family: Montserrat;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
-  line-height: 130%;
+  line-height: 130%; /* 15.6px */
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
-.card__item:nth-child(4) .card__subtitle {
-  color: var(--Tag-Pink, #ff43f7);
+.modal__number {
+  color: var(--dark);
 
-  font-family: "Montserrat";
-  font-size: 12px;
+  /* Paragraph */
+  font-family: Montserrat;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 130%;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-} */
+  font-weight: 400;
+  line-height: 148%; /* 23.68px */
+}
+
+.snowflakes__list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 5px;
+}
 
 .card__title {
   overflow: hidden;
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-overflow: ellipsis;
 
   /* Header 3 */
@@ -656,7 +738,7 @@ body {
 }
 
 .cta__title {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
 
   /* Header 2 */
@@ -676,7 +758,7 @@ body {
 .cta__subtitle {
   padding-top: 1px;
   padding-left: 1px;
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
 
   /* Caption */
@@ -695,9 +777,9 @@ body {
   align-items: center;
   gap: var(--Space-0, 0px);
   border-radius: 20px;
-  background: var(--Dark, #181c29);
+  background: var(--dark);
 
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
 
   /* Action Small */
@@ -714,7 +796,7 @@ body {
 .cta__button:hover {
   cursor: pointer;
   color: var(--dark);
-  background: var(--Static-White, #fff);
+  background: var(--static-white);
 }
 
 .timer {
@@ -723,14 +805,14 @@ body {
   align-items: center;
   gap: var(--Space-0, 0px);
   border-radius: 20px;
-  background: var(--Static-White-40, rgba(255, 255, 255, 0.4));
+  background: var(--static-white-40);
   list-style: none;
   margin-bottom: 60px;
 }
 
 .timer__item {
   display: flex;
-  width: var(--Size-80, 80px);
+  width: 80px;
   padding: var(--Space-0, 0px);
   flex-direction: column;
   align-items: center;
@@ -739,7 +821,7 @@ body {
 }
 
 .timer__numbers {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
   padding-left: 4px;
 
@@ -754,7 +836,7 @@ body {
 }
 
 .timer__words {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
 
   /* Header 4 */
@@ -770,7 +852,7 @@ body {
 .timer-line {
   width: 1px;
   height: 20px;
-  background: var(--Static-White-40, rgba(255, 255, 255, 0.4));
+  background: var(--static-white-40);
   right: 0px;
   top: 16.5px;
   position: absolute;
@@ -783,7 +865,7 @@ body {
   align-items: center;
   gap: var(--Space-0, 0px);
   align-self: stretch;
-  background: var(--Static-White, #fff);
+  background: var(--static-white);
 }
 
 .footer__inner {
@@ -815,22 +897,22 @@ body {
   gap: var(--Space-12, 12px);
   flex: 1 0 0;
   border-radius: 20px;
-  background: var(--Content-Background, #ecf3f8);
+  background: var(--content-background);
   transition: color 0.3s ease-in-out;
 }
 
 .contact__item:hover {
   cursor: pointer;
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }
 
 .contact__item:hover .contact__link,
 .contact__item:hover .contact__text {
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }
 
 .contact__link {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-align: center;
   padding-left: 4px;
 
@@ -847,7 +929,7 @@ body {
 }
 
 .contact__text {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-align: center;
 
   /* Header 3 */
@@ -881,7 +963,7 @@ body {
 
 .socials__item:hover {
   cursor: pointer;
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }
 
 .socials__item--svg {
@@ -889,7 +971,7 @@ body {
 }
 
 .socials__item:hover .socials__item--svg {
-  stroke: var(--Primary, #ff4646);
+  stroke: var(--primary);
   transition: stroke 0.3s ease-in-out;
 }
 
@@ -900,7 +982,7 @@ body {
 }
 
 .copyright {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-align: center;
 
   /* Paragraph */
@@ -918,7 +1000,7 @@ body {
 
 .footer__text--link {
   text-decoration: none;
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-align: center;
 
   font-family: "Allura";
@@ -932,9 +1014,9 @@ body {
 
 .footer__text--link:hover {
   cursor: pointer;
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }
 
 .footer__text:hover {
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }

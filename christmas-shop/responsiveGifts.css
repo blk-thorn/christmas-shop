@@ -72,7 +72,7 @@
     width: 21px;
     height: 2px;
     top: calc(60% - 1px);
-    background-color: var(--Dark, #181c29);
+    background-color: var(--dark);
     transition: all 0.3s ease-in-out;
     z-index: 50;
   }
@@ -92,7 +92,7 @@
     height: 2px;
     left: 9.5px;
     top: calc(40% - 1px);
-    background-color: var(--Dark, #181c29);
+    background-color: var(--dark);
     transition: all 0.3s ease-in-out;
     z-index: 5;
   }
@@ -131,7 +131,7 @@
     row-gap: 8px;
     padding-top: 180px;
     padding-bottom: 40px;
-    background: var(--Static-White, #fff);
+    background: var(--static-white);
     align-items: center;
     opacity: 0;
     transition: all 0.5s ease-in-out;
@@ -152,7 +152,7 @@
   }
 
   .menu__item {
-    color: var(--Dark, #181c29);
+    color: var(--dark);
 
     /* Action Large */
     font-family: "Montserrat";
@@ -224,7 +224,7 @@
     height: 2px;
     left: 9.5px;
     top: 15px;
-    background-color: var(--Dark, #181c29);
+    background-color: var(--dark);
   } */
 
   /* .burger::before {
@@ -235,7 +235,7 @@
     height: 2px;
     left: 9.5px;
     top: calc(60% - 1px);
-    background-color: var(--Dark, #181c29);
+    background-color: var(--dark);
   } */
 
   .gifts__list {
@@ -250,7 +250,7 @@
     align-items: center;
     gap: var(--Space-0, 0px);
 
-    color: var(--Static-White, #fff);
+    color: var(--static-white);
 
     /* Action Small */
     font-family: "Montserrat";
@@ -268,7 +268,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--Space-0, 0px);
-    color: var(--Static-White, #fff);
+    color: var(--static-white);
 
     /* Action Small */
     font-family: "Montserrat";

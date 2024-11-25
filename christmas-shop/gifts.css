@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 :root {
   /*_____________COLORS________________*/
   --primary: #ff4646;
@@ -82,7 +86,7 @@ body {
 }
 
 .logo__title {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
 
   /* Action Small */
   font-family: Montserrat;
@@ -129,13 +133,13 @@ body {
 .menu__item:hover {
   cursor: pointer;
   border-radius: 12px;
-  background: var(--Primary-10, rgba(255, 70, 70, 0.1));
-  color: var(--Primary, #ff4646);
+  background: var(--primary-10);
+  color: var(--primary);
 }
 
 .menu__item:nth-child(1) {
-  background: var(--Primary-10, rgba(255, 70, 70, 0.1));
-  color: var(--Primary, #ff4646);
+  background: var(--primary-10);
+  color: var(--primary);
   cursor: default;
 }
 
@@ -157,7 +161,7 @@ body {
 }
 
 .gifts__title {
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
   text-align: center;
 
   /* Header 1 */
@@ -208,7 +212,7 @@ body {
 
   border-radius: 12px;
 
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
 
   /* Action Small */
   font-family: Montserrat;
@@ -229,9 +233,9 @@ body {
   gap: var(--Space-0, 0px);
 
   border-radius: 12px;
-  background: var(--Static-White-20, rgba(255, 255, 255, 0.2));
+  background: var(--static-white-20);
 
-  color: var(--Static-White, #fff);
+  color: var(--static-white);
 
   /* Action Small */
   font-family: Montserrat;
@@ -245,8 +249,8 @@ body {
 
 .gifts__item:hover {
   cursor: pointer;
-  background: var(--Static-White-20, rgba(255, 255, 255, 0.2));
-  color: var(--Static-White, #fff);
+  background: var(--static-white-20);
+  color: var(--static-white);
 }
 
 .gifts__item:nth-child(1):hover {
@@ -254,6 +258,7 @@ body {
 }
 
 .card__list {
+  /* position: relative; */
   display: flex;
   padding: 0.5px 0px;
   justify-content: center;
@@ -262,6 +267,30 @@ body {
   gap: var(--Space-12, 12px);
   align-self: stretch;
   flex-wrap: wrap;
+}
+
+.scroll-top {
+  position: fixed;
+  display: flex;
+  align-self: flex-start;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+  padding: var(--Space-0, 0px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid var(--primary);
+  background: var(--static-white);
+  cursor: pointer;
+  display: none;
+}
+
+.scroll-top--active {
+  display: flex;
 }
 
 .card__item {
@@ -274,7 +303,7 @@ body {
   gap: var(--Space-0, 0px);
 
   border-radius: 20px;
-  background: var(--Content-Background, #ecf3f8);
+  background: var(--content-background);
 }
 
 .card__item:hover {
@@ -307,14 +336,14 @@ body {
   align-self: stretch;
 
   border-radius: 20px;
-  background: var(--Static-White, #fff);
+  background: var(--static-white);
 }
 
 .card__item:nth-child(1) .card__subtitle,
 .card__item:nth-child(3) .card__subtitle,
 .card__item:nth-child(4) .card__subtitle,
 .card__item:nth-child(10) .card__subtitle {
-  color: var(--Tag-Purple, #4361ff);
+  color: var(--tag-purple);
 
   /* Header 4 */
   font-family: "Montserrat";
@@ -329,7 +358,7 @@ body {
 .card__item:nth-child(5) .card__subtitle,
 .card__item:nth-child(7) .card__subtitle,
 .card__item:nth-child(9) .card__subtitle {
-  color: var(--Tag-Green, #06a44f);
+  color: var(--tag-green);
 
   /* Header 4 */
   font-family: "Montserrat";
@@ -345,7 +374,7 @@ body {
 .card__item:nth-child(8) .card__subtitle,
 .card__item:nth-child(11) .card__subtitle,
 .card__item:nth-child(12) .card__subtitle {
-  color: var(--Tag-Pink, #ff43f7);
+  color: var(--tag-pink);
 
   /* Header 4 */
   font-family: "Montserrat";
@@ -359,7 +388,7 @@ body {
 
 .card__title {
   overflow: hidden;
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-overflow: ellipsis;
 
   /* Header 3 */
@@ -380,7 +409,7 @@ body {
   align-items: center;
   gap: var(--Space-0, 0px);
   align-self: stretch;
-  background: var(--Static-White, #fff);
+  background: var(--static-white);
 }
 
 .footer__inner {
@@ -412,22 +441,22 @@ body {
   gap: var(--Space-12, 12px);
   flex: 1 0 0;
   border-radius: 20px;
-  background: var(--Content-Background, #ecf3f8);
+  background: var(--content-background);
   transition: color 0.3s ease-in-out;
 }
 
 .contact__item:hover {
   cursor: pointer;
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }
 
 .contact__item:hover .contact__link,
 .contact__item:hover .contact__text {
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }
 
 .contact__link {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-align: center;
   padding-left: 4px;
 
@@ -444,7 +473,7 @@ body {
 }
 
 .contact__text {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-align: center;
 
   /* Header 3 */
@@ -478,11 +507,11 @@ body {
 
 .socials__item:hover {
   cursor: pointer;
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }
 
 .socials__item:hover .socials__item--svg {
-  stroke: var(--Primary, #ff4646);
+  stroke: var(--primary);
   transition: stroke 0.4s ease-in-out;
 }
 
@@ -493,7 +522,7 @@ body {
 }
 
 .copyright {
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-align: center;
 
   /* Paragraph */
@@ -511,7 +540,7 @@ body {
 
 .footer__text--link {
   text-decoration: none;
-  color: var(--Dark, #181c29);
+  color: var(--dark);
   text-align: center;
 
   font-family: "Allura";
@@ -525,9 +554,9 @@ body {
 
 .footer__text--link:hover {
   cursor: pointer;
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }
 
 .footer__text:hover {
-  color: var(--Primary, #ff4646);
+  color: var(--primary);
 }

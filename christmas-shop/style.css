@@ -9,6 +9,12 @@
   font-family: "Montserrat";
 }
 
+img,
+video,
+canvas {
+  overflow: clip;
+}
+
 :root {
   /*_____________COLORS________________*/
   --primary: #ff4646;
@@ -147,12 +153,12 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.menu__item:hover {
+/* .menu__item:hover {
   cursor: pointer;
   border-radius: 12px;
   background: var(--Primary-10, rgba(255, 70, 70, 0.1));
   color: var(--Primary, #ff4646);
-}
+} */
 
 .burger,
 .burger__line {
@@ -248,11 +254,11 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.hero__button:hover {
+/* .hero__button:hover {
   cursor: pointer;
   color: var(--dark);
   background: var(--Static-White, #fff);
-}
+} */
 
 .about {
   display: flex;
@@ -457,7 +463,7 @@ body {
   background: lightgray 50% / cover no-repeat, var(--Primary, #ff4646);
   transition: all 0.3s ease-in-out;
 }
-
+/* 
 .slider__button--right:hover {
   cursor: pointer;
   border: 1px solid var(--Static-White, #fff);
@@ -466,8 +472,7 @@ body {
 
 .slider__button--right:hover .slider__button--icon {
   stroke: var(--primary);
-  /* stroke-opacity: 1; */
-}
+} */
 
 .slider__button--right {
   border-radius: 20px;
@@ -547,13 +552,13 @@ body {
   background: var(--Content-Background, #ecf3f8);
 }
 
-.card__item:hover {
+/* .card__item:hover {
   cursor: pointer;
 }
 
 .card__item:hover .card__title {
   color: var(--primary);
-}
+} */
 
 .image__container {
   max-height: 230px;
@@ -718,11 +723,11 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.cta__button:hover {
+/* .cta__button:hover {
   cursor: pointer;
   color: var(--dark);
   background: var(--Static-White, #fff);
-}
+} */
 
 .timer {
   display: flex;
@@ -826,7 +831,7 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
-.contact__item:hover {
+/* .contact__item:hover {
   cursor: pointer;
   color: var(--Primary, #ff4646);
 }
@@ -834,7 +839,7 @@ body {
 .contact__item:hover .contact__link,
 .contact__item:hover .contact__text {
   color: var(--Primary, #ff4646);
-}
+} */
 
 .contact__link {
   color: var(--Dark, #181c29);
@@ -886,19 +891,19 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.socials__item:hover {
+/* .socials__item:hover {
   cursor: pointer;
   color: var(--Primary, #ff4646);
-}
+} */
 
 .socials__item--svg {
   transition: stroke 0.3s ease-in-out;
 }
 
-.socials__item:hover .socials__item--svg {
+/* .socials__item:hover .socials__item--svg {
   stroke: var(--Primary, #ff4646);
   transition: stroke 0.3s ease-in-out;
-}
+} */
 
 .socials__item .socials__item--link {
   display: block;
@@ -915,7 +920,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 270%;
+  line-height: 280%;
   /* line-height: 300%; */
 }
 
@@ -937,11 +942,86 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
-.footer__text--link:hover {
+/* .footer__text--link:hover {
   cursor: pointer;
   color: var(--Primary, #ff4646);
 }
 
 .footer__text:hover {
   color: var(--Primary, #ff4646);
+} */
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .menu__item:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    background: var(--Primary-10, rgba(255, 70, 70, 0.1));
+    color: var(--Primary, #ff4646);
+  }
+
+  .menu__item:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    background: var(--Primary-10, rgba(255, 70, 70, 0.1));
+    color: var(--Primary, #ff4646);
+  }
+  .hero__button:hover {
+    cursor: pointer;
+    color: var(--dark);
+    background: var(--Static-White, #fff);
+  }
+
+  .slider__button--right:hover {
+    cursor: pointer;
+    border: 1px solid var(--Static-White, #fff);
+    background: var(--Static-White, #fff);
+  }
+
+  .slider__button--right:hover .slider__button--icon {
+    stroke: var(--primary);
+    /* stroke-opacity: 1; */
+  }
+
+  .card__item:hover {
+    cursor: pointer;
+  }
+
+  .card__item:hover .card__title {
+    color: var(--primary);
+  }
+
+  .socials__item:hover {
+    cursor: pointer;
+    color: var(--Primary, #ff4646);
+  }
+
+  .socials__item:hover .socials__item--svg {
+    stroke: var(--Primary, #ff4646);
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  .contact__item:hover {
+    cursor: pointer;
+    color: var(--Primary, #ff4646);
+  }
+
+  .contact__item:hover .contact__link,
+  .contact__item:hover .contact__text {
+    color: var(--Primary, #ff4646);
+  }
+
+  .footer__text--link:hover {
+    cursor: pointer;
+    color: var(--Primary, #ff4646);
+  }
+
+  .footer__text:hover {
+    color: var(--Primary, #ff4646);
+  }
+
+  .cta__button:hover {
+    cursor: pointer;
+    color: var(--dark);
+    background: var(--Static-White, #fff);
+  }
 }

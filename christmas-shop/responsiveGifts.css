@@ -86,6 +86,10 @@
   .contact__item {
     width: 100%;
   }
+
+  .copyright {
+    line-height: 280%;
+  }
 }
 
 @media (min-width: 381px) and (max-width: 768px) {
@@ -203,7 +207,7 @@
     width: 100%;
   }
 
-  .copyright {
-    line-height: 258%;
-  }
+  /* .copyright {
+    line-height: 260%;
+  } */
 }

@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 :root {
   /*_____________COLORS________________*/
   --primary: #ff4646;
@@ -254,6 +258,7 @@ body {
 }
 
 .card__list {
+  /* position: relative; */
   display: flex;
   padding: 0.5px 0px;
   justify-content: center;
@@ -262,6 +267,30 @@ body {
   gap: var(--Space-12, 12px);
   align-self: stretch;
   flex-wrap: wrap;
+}
+
+.scroll-top {
+  position: fixed;
+  display: flex;
+  align-self: flex-start;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+  padding: var(--Space-0, 0px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid var(--Primary, #ff4646);
+  background: var(--Static-White, #fff);
+  cursor: pointer;
+  display: none;
+}
+
+.scroll-top--active {
+  display: flex;
 }
 
 .card__item {

@@ -372,6 +372,118 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  /* display:flex; */
+  align-items: center;
+  justify-content: center;
+  top: 20%;
+  left: 0px;
+  width: 100vw;
+  height: auto;
+  background: rgba(24, 28, 41, 0.8);
+  box-shadow: 500vh -500vh 2px 1000vh rgba(24, 28, 41, 0.8);
+  z-index: 999;
+  box-sizing: unset;
+}
+
+.modal__inner {
+  display: flex;
+  padding: var(--Space-20, 20px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-20, 20px);
+  align-self: stretch;
+}
+
+.modal__card {
+  position: relative;
+  display: flex;
+  width: 25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1 0 0; */
+  border-radius: var(--Space-20, 20px);
+  background: var(--Content-Background, #ecf3f8);
+}
+
+.modal__button {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #ffffff00;
+}
+
+.modal__button-path {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.modal__button:hover .modal__button-path {
+  stroke: var(--primary);
+}
+
+.modal__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.modal__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  padding: var(--Space-0, 0px);
+  align-items: center;
+  gap: var(--Space-12, 12px);
+  align-self: stretch;
+}
+
+.modal__card:hover .card__title {
+  color: var(--primary);
+}
+
+.modal__text {
+  flex: 1 0 0;
+}
+
+.modal__title {
+  color: var(--Dark, #181c29);
+
+  /* Header 4 */
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 15.6px */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.modal__number {
+  color: var(--Dark, #181c29);
+
+  /* Paragraph */
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 148%; /* 23.68px */
+}
+
+.snowflakes__list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 5px;
+}
+
 .footer {
   display: flex;
   padding: 59.5px 8px 60px 8px;

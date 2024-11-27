@@ -96,6 +96,7 @@ window.onclick = function (e) {
     const cardItem = document.createElement("li");
     cardItem.classList.add("card__item");
     cardItem.setAttribute("data-modal-btn", index);
+    cardItem.setAttribute("data-f", card.category);
 
     const imageContainer = document.createElement("div");
     imageContainer.classList.add("image__container")

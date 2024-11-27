@@ -225,7 +225,14 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.gifts__item:nth-child(1) {
+.gifts__item--active {
+  cursor: default !important;
+  background: var(--Static-White-20, rgba(255, 255, 255, 0.2));
+  color: var(--Static-White, #fff);
+}
+
+.gifts__item:active {
+  cursor: default;
   display: flex;
   padding: var(--Space-12, 12px) var(--Space-20, 20px);
   justify-content: center;
@@ -237,7 +244,6 @@ body {
 
   color: var(--Static-White, #fff);
 
-  /* Action Small */
   font-family: Montserrat;
   font-size: 12px;
   font-style: normal;
@@ -253,9 +259,9 @@ body {
   color: var(--Static-White, #fff);
 }
 
-.gifts__item:nth-child(1):hover {
+/* .gifts__item:nth-child(1):hover {
   cursor: default;
-}
+} */
 
 .card__list {
   /* position: relative; */
@@ -339,43 +345,7 @@ body {
   background: var(--Static-White, #fff);
 }
 
-.card__item:nth-child(1) .card__subtitle,
-.card__item:nth-child(3) .card__subtitle,
-.card__item:nth-child(4) .card__subtitle,
-.card__item:nth-child(10) .card__subtitle {
-  color: var(--Tag-Purple, #4361ff);
-
-  /* Header 4 */
-  font-family: "Montserrat";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 130%; /* 15.6px */
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-}
-.card__item:nth-child(2) .card__subtitle,
-.card__item:nth-child(5) .card__subtitle,
-.card__item:nth-child(7) .card__subtitle,
-.card__item:nth-child(9) .card__subtitle {
-  color: var(--Tag-Green, #06a44f);
-
-  /* Header 4 */
-  font-family: "Montserrat";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 130%; /* 15.6px */
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-}
-
-.card__item:nth-child(6) .card__subtitle,
-.card__item:nth-child(8) .card__subtitle,
-.card__item:nth-child(11) .card__subtitle,
-.card__item:nth-child(12) .card__subtitle {
-  color: var(--Tag-Pink, #ff43f7);
-
+.card__subtitle {
   /* Header 4 */
   font-family: "Montserrat";
   font-size: 12px;
@@ -559,4 +529,8 @@ body {
 
 .footer__text:hover {
   color: var(--Primary, #ff4646);
+}
+
+.hide {
+  display: none;
 }

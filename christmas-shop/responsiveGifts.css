@@ -28,6 +28,10 @@
     flex-direction: column;
   }
 
+  .scroll-top {
+    right: 0.5%;
+  }
+
   .contact__item {
     width: 100%;
   }
@@ -45,7 +49,7 @@
   .menu__list {
     display: none;
   }
-  .noscroll {
+  .stop-scroll {
     height: 100vh;
     overflow: hidden;
     position: fixed;
@@ -72,7 +76,7 @@
     width: 21px;
     height: 2px;
     top: calc(60% - 1px);
-    background-color: var(--dark);
+    background-color: var(--dark, #181c29);
     transition: all 0.3s ease-in-out;
     z-index: 50;
   }
@@ -115,9 +119,9 @@
     width: 100vw;
   }
 
-  .header {
+  /* .header {
     padding: 0;
-  }
+  } */
 
   .menu__list {
     position: fixed;
@@ -129,7 +133,7 @@
     max-width: 100%;
     height: 100%;
     row-gap: 8px;
-    padding-top: 180px;
+    /* padding-top: 180px; */
     padding-bottom: 40px;
     background: var(--static-white);
     align-items: center;
@@ -140,15 +144,15 @@
   }
 
   .menu__list--active {
-    top: 64px;
+    /* padding-top: 36.5%; */
+    top: 53px;
     width: 100%;
     transform: translateX(0);
     opacity: 1;
-    z-index: 1;
     justify-content: center;
     align-items: center;
     /* height: 100vh; */
-    z-index: 2;
+    z-index: 5;
   }
 
   .menu__item {
@@ -164,12 +168,20 @@
     text-transform: uppercase;
   }
 
+  .menu__item:first-child {
+    cursor: not-allowed;
+  }
+
   .contact__list {
     flex-direction: column;
   }
 
   .contact__item {
     width: 100%;
+  }
+
+  .copyright {
+    line-height: 280%;
   }
 }
 
@@ -201,7 +213,7 @@
     padding: 0px 8px;
   }
 
-  /* .menu__list {
+  .menu__list {
     display: none;
   }
   .burger {
@@ -225,9 +237,9 @@
     left: 9.5px;
     top: 15px;
     background-color: var(--dark);
-  } */
+  }
 
-  /* .burger::before {
+  .burger::before {
     content: "";
     position: absolute;
     display: inline-block;
@@ -236,7 +248,7 @@
     left: 9.5px;
     top: calc(60% - 1px);
     background-color: var(--dark);
-  } */
+  }
 
   .gifts__list {
     gap: 0px;
@@ -262,7 +274,7 @@
     text-transform: uppercase;
   }
 
-  .gifts__item:nth-child(1) {
+  /* .gifts__item:nth-child(1) {
     display: flex;
     padding: var(--Space-12, 12px) var(--Space-8, 8px);
     justify-content: center;
@@ -270,15 +282,15 @@
     gap: var(--Space-0, 0px);
     color: var(--static-white);
 
-    /* Action Small */
+
     font-family: "Montserrat";
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: 130%; /* 15.6px */
+    line-height: 130%;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-  }
+  } */
 
   .contact__list {
     flex-direction: column;
@@ -288,7 +300,11 @@
     width: 100%;
   }
 
-  .copyright {
-    line-height: 258%;
+  /* .copyright {
+    line-height: 260%;
+  } */
+
+  .modal__card {
+    width: 22.75rem;
   }
 }

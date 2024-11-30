@@ -9,6 +9,12 @@
   font-family: "Montserrat";
 }
 
+img,
+video,
+canvas {
+  overflow: clip;
+}
+
 :root {
   /*_____________COLORS________________*/
   --primary: #ff4646;
@@ -61,7 +67,7 @@ body {
   /* overflow-y: hidden; */
 }
 
-.slider__inner {
+.slider {
   overflow: hidden;
 }
 
@@ -138,12 +144,12 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.menu__item:hover {
+/* .menu__item:hover {
   cursor: pointer;
   border-radius: 12px;
   background: var(--primary-10);
   color: var(--primary);
-}
+}*/
 
 .burger,
 .burger__line {
@@ -239,12 +245,6 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.hero__button:hover {
-  cursor: pointer;
-  color: var(--dark);
-  background: var(--static-white);
-}
-
 .about {
   display: flex;
   padding: 60px 8px;
@@ -335,13 +335,14 @@ body {
   gap: var(--Space-0, 0px);
   align-self: stretch;
   margin: 0 auto;
+  padding: 0 8px;
 }
 
 .slider__inner {
   display: flex;
   padding: 60.5px 0px 60px 0px;
   width: 100%;
-  /* max-width: 1276px; */
+  max-width: 1276px;
   /* padding: var(--Space-0, 0px); */
   flex-direction: column;
   align-items: center;
@@ -357,16 +358,27 @@ body {
   align-self: stretch;
 }
 
+.slider__wrapper {
+  /* margin-left: 5.13rem; */
+  /* margin: 20px 0; */
+  display: flex;
+  /* overflow: hidden; */
+  /* max-width: 1358px; */
+  max-width: 1276px;
+  /* max-width: 100%; */
+}
+
 .slider__row {
   display: flex;
   list-style: none;
   /* max-width: 1276px; */
-  width: 100%;
-  padding-left: 5.13rem;
+  /* width: 100%; */
+  /* padding-left: 5.13rem; */
   align-items: center;
   text-align: left;
   gap: 20.3px;
   justify-content: flex-start;
+  transition: all 0.4s ease-in-out;
 }
 
 .slider__subtitle {
@@ -412,14 +424,12 @@ body {
   text-transform: uppercase;
 }
 
-.slider__item:nth-child(2) .slider__image,
-.slider__item:nth-child(4) .slider__image {
-  border-radius: 20px;
-}
+/* .slider__item:last-child {
+  padding-right: 4%;
+} */
 
-.slider__item:nth-child(6) .slider__image {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+.slider__image {
+  border-radius: 20px;
 }
 
 .slider__buttons {
@@ -444,26 +454,25 @@ body {
   gap: var(--Space-0, 0px);
 
   border-radius: 20px;
-  border: 1px solid var(--static-white-40);
+  border: 1px solid var(--static-white);
   background: lightgray 50% / cover no-repeat, var(--primary);
   transition: all 0.3s ease-in-out;
+  stroke: var(--static-white);
+  stroke-opacity: 1;
 }
 
-.slider__button--right:hover {
-  cursor: pointer;
-  border: 1px solid var(--static-white);
-  background: var(--static-white);
+.slider__button:disabled {
+  cursor: not-allowed;
+  border: 1px solid var(--static-white-40);
+  /*background: var(--static-white);*/
+  pointer-events: none;
 }
 
-.slider__button--right:hover .slider__button--icon {
-  stroke: var(--primary);
-  /* stroke-opacity: 1; */
+.slider__button:disabled .slider__button--icon {
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-opacity: 0.4;
 }
 
-.slider__button--right {
-  border-radius: 20px;
-  border: 1px solid var(--static-white);
-}
 .best-gifts {
   background: url(./img/bg-snow.png) center calc(100% + 16px) / 90rem repeat,
     var(--primary);
@@ -538,19 +547,20 @@ body {
   background: var(--content-background);
 }
 
-.card__item:hover {
+/* .card__item:hover {
   cursor: pointer;
 }
 
 .card__item:hover .card__title {
   color: var(--primary);
-}
+} */
 
 .image__container {
   max-height: 230px;
   background: 50% / cover no-repeat;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  overflow-y: hidden;
 }
 
 .card__image {
@@ -588,14 +598,15 @@ body {
   /* display:flex; */
   align-items: center;
   justify-content: center;
-  top: 20%;
+  top: 50%;
   left: 0px;
   width: 100vw;
-  height: auto;
+  height: 100%;
   background: rgba(24, 28, 41, 0.8);
   box-shadow: 500vh -500vh 2px 1000vh rgba(24, 28, 41, 0.8);
   z-index: 999;
   box-sizing: unset;
+  transform: translateY(-50%);
 }
 
 .modal__inner {
@@ -633,9 +644,9 @@ body {
   transition: stroke 0.3s ease-in-out;
 }
 
-.modal__button:hover .modal__button-path {
+/* .modal__button:hover .modal__button-path {
   stroke: var(--primary);
-}
+} */
 
 .modal__list {
   display: flex;
@@ -654,9 +665,14 @@ body {
   align-self: stretch;
 }
 
-.modal__card:hover .card__title {
-  color: var(--primary);
+.modal__image {
+  margin-top: -35px;
+  height: 300px;
 }
+
+/* .modal__card:hover .card__title {
+  color: var(--primary);
+} */
 
 .modal__text {
   flex: 1 0 0;
@@ -686,11 +702,23 @@ body {
   line-height: 148%; /* 23.68px */
 }
 
+.card__description {
+  color: var(--dark);
+
+  /* Paragraph */
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 148%; /* 23.68px */
+  padding-bottom: 11px;
+}
+
 .snowflakes__list {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 5px;
+  gap: 8px;
 }
 
 .card__title {
@@ -793,11 +821,11 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.cta__button:hover {
+/* .cta__button:hover {
   cursor: pointer;
   color: var(--dark);
   background: var(--static-white);
-}
+}*/
 
 .timer {
   display: flex;
@@ -901,7 +929,7 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
-.contact__item:hover {
+/* .contact__item:hover {
   cursor: pointer;
   color: var(--primary);
 }
@@ -909,7 +937,7 @@ body {
 .contact__item:hover .contact__link,
 .contact__item:hover .contact__text {
   color: var(--primary);
-}
+}*/
 
 .contact__link {
   color: var(--dark);
@@ -961,19 +989,19 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.socials__item:hover {
+/* .socials__item:hover {
   cursor: pointer;
   color: var(--primary);
-}
+}*/
 
 .socials__item--svg {
   transition: stroke 0.3s ease-in-out;
 }
 
-.socials__item:hover .socials__item--svg {
+/*.socials__item:hover .socials__item--svg {
   stroke: var(--primary);
   transition: stroke 0.3s ease-in-out;
-}
+} */
 
 .socials__item .socials__item--link {
   display: block;
@@ -990,7 +1018,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 270%;
+  line-height: 280%;
   /* line-height: 300%; */
 }
 
@@ -1017,6 +1045,80 @@ body {
   color: var(--primary);
 }
 
+/* .footer__text:hover {
+  color: var(--primary);
+} */
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .menu__item:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    background: var(--primary-10);
+    color: var(--primary);
+  }
+
+  .menu__item:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    background: var(--primary-10);
+    color: var(--primary);
+  }
+  .hero__button:hover {
+    cursor: pointer;
+    color: var(--dark);
+    background: var(--static-white);
+  }
+
+  .slider__button:hover {
+    cursor: pointer;
+    border: 1px solid var(--static-white);
+    background: var(--static-white);
+  }
+
+  .slider__button:hover .slider__button--icon {
+    stroke: var(--primary);
+    /* stroke-opacity: 1; */
+  }
+
+  .card__item:hover {
+    cursor: pointer;
+  }
+
+  .card__item:hover .card__title {
+    color: var(--primary);
+  }
+
+  .modal__button:hover .modal__button-path {
+    stroke: var(--primary);
+  }
+
+  .socials__item:hover {
+    cursor: pointer;
+    color: var(--primary);
+  }
+
+  .socials__item:hover .socials__item--svg {
+    stroke: var(--primary);
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  .contact__item:hover .contact__link,
+  .contact__item:hover .contact__text {
+    color: var(--primary);
+  }
+
+  .footer__text--link:hover {
+    cursor: pointer;
+    color: var(--primary);
+  }
+
 .footer__text:hover {
   color: var(--primary);
+}
+
+  .cta__button:hover {
+    cursor: pointer;
+    color: var(--dark);
+    background: var(--static-white);
+  }
 }

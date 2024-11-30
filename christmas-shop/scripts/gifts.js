@@ -49,15 +49,14 @@ renderCards().then(cards => {
         giftCards.forEach((cardElement, index) => {
            cardElement.addEventListener("click", (event) => {
                const target = event.currentTarget;
-       
-               // Ищем ближайший элемент с data-modal-btn
+
                const modalBtnElement = event.currentTarget.closest("[data-modal-btn]");
        
                if (modalBtnElement) {
                    const name = modalBtnElement.dataset.modalBtn;
        
                    if (!isModalOpen) {
-                       createModal(newArr[index], name); // Используем имя для создания модального окна
+                       createModal(newArr[index], name);
                        body.classList.add("no-scroll");
                    } else {
                        console.log("Modal is opened");
@@ -74,12 +73,17 @@ renderCards().then(cards => {
 });
 
 
+window.onload = () => {
+    const firstGiftItem = document.querySelector(".gifts__item");
+    firstGiftItem.classList.add("gifts__item--active");
+}
+
+
     giftsList.addEventListener("click", (event) => {
 
         const liElement = event.target.closest('LI');
         const filterClass = document.querySelectorAll(".card__item");
         const giftsItem = document.querySelectorAll(".gifts__item");
-       
 
         
         if(!liElement) return;
@@ -88,6 +92,7 @@ renderCards().then(cards => {
             element.classList.remove("gifts__item--active");
         });
         liElement.classList.add("gifts__item--active");
+       
         
         filterClass.forEach(element => {
             element.classList.remove("hide");
@@ -102,8 +107,8 @@ renderCards().then(cards => {
      function closeModal() {
         if (isModalOpen) {
             if (currentModal) {
-                currentModal.remove(); // Удаляем текущее модальное окно
-                currentModal = null; // Сбрасываем переменную
+                currentModal.remove();
+                currentModal = null;
             }
             body.classList.remove("no-scroll");
             isModalOpen = false;
@@ -202,7 +207,7 @@ function createCard (card, index) {
     const img = document.createElement("img");
     img.src = card.img;
     img.alt = "image"; 
-    img.classList.add("card__image");
+    img.classList.add("modal__image");
 
     const textContainer = document.createElement("div");
     textContainer.classList.add("text__container")
@@ -210,6 +215,10 @@ function createCard (card, index) {
     const name = document.createElement("h3");
     name.classList.add("card__title");
     name.textContent = card.name;
+
+    const description = document.createElement("p");
+    description.classList.add("card__description");
+    description.textContent = card.description;
 
     const category = document.createElement("h4");
     category.classList.add("card__subtitle");
@@ -246,6 +255,7 @@ function createCard (card, index) {
     imageContainer.appendChild(img);
     textContainer.appendChild(category);
     textContainer.appendChild(name);
+    textContainer.appendChild(description);
     textContainer.appendChild(modalTitle);
     textContainer.appendChild(modalList);
 

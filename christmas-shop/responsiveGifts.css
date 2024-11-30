@@ -28,6 +28,10 @@
     flex-direction: column;
   }
 
+  .scroll-top {
+    right: 0.5%;
+  }
+
   .contact__item {
     width: 100%;
   }
@@ -45,7 +49,7 @@
   .menu__list {
     display: none;
   }
-  .noscroll {
+  .stop-scroll {
     height: 100vh;
     overflow: hidden;
     position: fixed;
@@ -115,9 +119,9 @@
     width: 100vw;
   }
 
-  .header {
+  /* .header {
     padding: 0;
-  }
+  } */
 
   .menu__list {
     position: fixed;
@@ -140,6 +144,7 @@
   }
 
   .menu__list--active {
+    padding-top: 36.5%;
     top: 64px;
     width: 100%;
     transform: translateX(0);
@@ -199,6 +204,10 @@
 @media (min-width: 160px) and (max-width: 380px) {
   .header {
     padding: 0px 8px;
+  }
+
+  .scroll-top {
+    right: 2%;
   }
 
   /* .menu__list {
@@ -290,5 +299,9 @@
 
   .copyright {
     line-height: 258%;
+  }
+
+  .modal__card {
+    width: 22.75rem;
   }
 }

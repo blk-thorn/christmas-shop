@@ -280,7 +280,7 @@ body {
   display: flex;
   align-self: flex-start;
   top: 50%;
-  left: 0px;
+  right: 0;
   transform: translateY(-50%);
 
   width: 56px;
@@ -325,6 +325,7 @@ body {
   background: 50% / cover no-repeat;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  overflow-y: hidden;
 }
 
 .card__image {
@@ -410,6 +411,11 @@ body {
   background: var(--Content-Background, #ecf3f8);
 }
 
+.modal__image {
+  margin-top: -35px;
+  height: 300px;
+}
+
 .modal__button {
   position: absolute;
   right: 12px;
@@ -476,12 +482,22 @@ body {
   font-weight: 400;
   line-height: 148%; /* 23.68px */
 }
+.card__description {
+  color: var(--Dark, #181c29);
 
+  /* Paragraph */
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 148%; /* 23.68px */
+  padding-bottom: 11px;
+}
 .snowflakes__list {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 5px;
+  gap: 8px;
 }
 
 .footer {

@@ -202,7 +202,7 @@ function createCard (card, index) {
     const img = document.createElement("img");
     img.src = card.img;
     img.alt = "image"; 
-    img.classList.add("card__image");
+    img.classList.add("modal__image");
 
     const textContainer = document.createElement("div");
     textContainer.classList.add("text__container")
@@ -210,6 +210,10 @@ function createCard (card, index) {
     const name = document.createElement("h3");
     name.classList.add("card__title");
     name.textContent = card.name;
+
+    const description = document.createElement("p");
+    description.classList.add("card__description");
+    description.textContent = card.description;
 
     const category = document.createElement("h4");
     category.classList.add("card__subtitle");
@@ -246,6 +250,7 @@ function createCard (card, index) {
     imageContainer.appendChild(img);
     textContainer.appendChild(category);
     textContainer.appendChild(name);
+    textContainer.appendChild(description);
     textContainer.appendChild(modalTitle);
     textContainer.appendChild(modalList);
 

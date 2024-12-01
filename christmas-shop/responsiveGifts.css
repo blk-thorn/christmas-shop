@@ -179,6 +179,10 @@
   .contact__item {
     width: 100%;
   }
+
+  .copyright {
+    line-height: 280%;
+  }
 }
 
 @media (min-width: 381px) and (max-width: 768px) {
@@ -269,5 +273,3 @@
 
   .modal__card {
     width: 22.75rem;
-  }
-}

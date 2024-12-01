@@ -147,8 +147,8 @@
   }
 
   .copyright {
-    /* line-height: 258%; */
-    line-height: 285%;
+    line-height: 275%;
+    /* line-height: 285%; */
   }
 }
 
@@ -488,7 +488,6 @@
   .contact__item {
     width: 100%;
   }
-
   .copyright {
     /* line-height: 290%; */
     line-height: 258%;
@@ -497,4 +496,3 @@
   .modal__card {
     width: 22.75rem;
   }
-}

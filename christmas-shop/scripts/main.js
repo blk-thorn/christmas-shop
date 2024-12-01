@@ -60,10 +60,17 @@ const slider = document.querySelector(".slide__list");
 const sliderRow = document.querySelector(".slider__row")
 const slides = document.querySelectorAll(".slider__item");
 
+const sliderIconRight = document.querySelector(".slider__icon--right");
+const sliderIconLeft = document.querySelector(".slider__icon--left");
+
 let counter = 0;
 let moveSlider = 0;
 let slideTransform = 0;
-let lastWidth = window.innerWidth;
+
+window.onload = () => {
+	leftBtn.disabled = true;
+	sliderIconLeft.disabled = true;
+}
 
 function updateMoveSlider() {
 	const visibleArea = sliderWrapper.clientWidth; 
@@ -105,16 +112,22 @@ function updateMoveSlider() {
 	
 		if (counter >= lastVisibleIndex) {
 			rightBtn.disabled = true;
+			sliderIconRight.disabled = true;
+			leftBtn.disabled = false;
+			
 		} else {
-			rightBtn.disabled = false;
+			leftBtn.disabled = true;
+			sliderIconLeft.disabled = true;
+			rightBtn.disabled = false;	
 		}
 	
 		leftBtn.disabled = (counter === 0); // Если слайдер в начале, кнопка влево блокируется
+		sliderIconLeft.disabled = (counter === 0);
 	}
 	
 
 rightBtn.addEventListener("click", () => {
-    counter++;
+   console.log(counter++);
     moveSlides();
 });
 

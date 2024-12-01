@@ -138,12 +138,12 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.menu__item:hover {
+/* .menu__item:hover {
   cursor: pointer;
   border-radius: 12px;
   background: var(--Primary-10, rgba(255, 70, 70, 0.1));
   color: var(--Primary, #ff4646);
-}
+} */
 
 .burger,
 .burger__line {
@@ -239,11 +239,11 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.hero__button:hover {
+/* .hero__button:hover {
   cursor: pointer;
   color: var(--dark);
   background: var(--Static-White, #fff);
-}
+} */
 
 .about {
   display: flex;
@@ -360,7 +360,7 @@ body {
 .slider__wrapper {
   margin-left: 5.13rem;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
   max-width: 1358px;
   /* max-width: 100%; */
 }
@@ -421,6 +421,10 @@ body {
   text-transform: uppercase;
 }
 
+.slider__item:last-child {
+  padding-right: 4%;
+}
+
 .slider__image {
   border-radius: 20px;
 }
@@ -447,26 +451,24 @@ body {
   gap: var(--Space-0, 0px);
 
   border-radius: 20px;
-  border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.4));
+  border: 1px solid var(--Static-White, #fff);
   background: lightgray 50% / cover no-repeat, var(--Primary, #ff4646);
   transition: all 0.3s ease-in-out;
+  stroke: var(--Static-White, #fff);
+  stroke-opacity: "1";
 }
 
-.slider__button--right:hover {
-  cursor: pointer;
-  border: 1px solid var(--Static-White, #fff);
-  background: var(--Static-White, #fff);
+.slider__button:disabled {
+  border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.4));
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
-.slider__button--right:hover .slider__button--icon {
-  stroke: var(--primary);
-  /* stroke-opacity: 1; */
+.slider__button:disabled .slider__button--icon {
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-opacity: "0.4"; /* Уменьшение яркости иконки для отключенной кнопки */
 }
 
-.slider__button--right {
-  border-radius: 20px;
-  border: 1px solid var(--Static-White, #fff);
-}
 .best-gifts {
   background: url(./img/bg-snow.png) center calc(100% + 16px) / 90rem repeat,
     var(--primary);
@@ -541,13 +543,13 @@ body {
   background: var(--Content-Background, #ecf3f8);
 }
 
-.card__item:hover {
+/* .card__item:hover {
   cursor: pointer;
 }
 
 .card__item:hover .card__title {
   color: var(--primary);
-}
+} */
 
 .image__container {
   max-height: 230px;
@@ -637,9 +639,9 @@ body {
   transition: stroke 0.3s ease-in-out;
 }
 
-.modal__button:hover .modal__button-path {
+/* .modal__button:hover .modal__button-path {
   stroke: var(--primary);
-}
+} */
 
 .modal__list {
   display: flex;
@@ -663,9 +665,9 @@ body {
   height: 300px;
 }
 
-.modal__card:hover .card__title {
+/* .modal__card:hover .card__title {
   color: var(--primary);
-}
+} */
 
 .modal__text {
   flex: 1 0 0;
@@ -814,11 +816,11 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.cta__button:hover {
+/* .cta__button:hover {
   cursor: pointer;
   color: var(--dark);
   background: var(--Static-White, #fff);
-}
+} */
 
 .timer {
   display: flex;
@@ -922,7 +924,7 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
-.contact__item:hover {
+/* .contact__item:hover {
   cursor: pointer;
   color: var(--Primary, #ff4646);
 }
@@ -930,7 +932,7 @@ body {
 .contact__item:hover .contact__link,
 .contact__item:hover .contact__text {
   color: var(--Primary, #ff4646);
-}
+} */
 
 .contact__link {
   color: var(--Dark, #181c29);
@@ -982,19 +984,19 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.socials__item:hover {
+/* .socials__item:hover {
   cursor: pointer;
   color: var(--Primary, #ff4646);
-}
+} */
 
 .socials__item--svg {
   transition: stroke 0.3s ease-in-out;
 }
 
-.socials__item:hover .socials__item--svg {
+/* .socials__item:hover .socials__item--svg {
   stroke: var(--Primary, #ff4646);
   transition: stroke 0.3s ease-in-out;
-}
+} */
 
 .socials__item .socials__item--link {
   display: block;
@@ -1038,6 +1040,85 @@ body {
   color: var(--Primary, #ff4646);
 }
 
-.footer__text:hover {
+/* .footer__text:hover {
   color: var(--Primary, #ff4646);
+} */
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .menu__item:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    background: var(--Primary-10, rgba(255, 70, 70, 0.1));
+    color: var(--Primary, #ff4646);
+  }
+
+  .menu__item:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    background: var(--Primary-10, rgba(255, 70, 70, 0.1));
+    color: var(--Primary, #ff4646);
+  }
+  .hero__button:hover {
+    cursor: pointer;
+    color: var(--dark);
+    background: var(--Static-White, #fff);
+  }
+
+  .slider__button:hover {
+    cursor: pointer;
+    border: 1px solid var(--Static-White, #fff);
+    background: var(--Static-White, #fff);
+  }
+
+  .slider__button:hover .slider__button--icon {
+    stroke: var(--primary);
+    /* stroke-opacity: 1; */
+  }
+
+  .card__item:hover {
+    cursor: pointer;
+  }
+
+  .card__item:hover .card__title {
+    color: var(--primary);
+  }
+
+  .modal__button:hover .modal__button-path {
+    stroke: var(--primary);
+  }
+
+  .socials__item:hover {
+    cursor: pointer;
+    color: var(--Primary, #ff4646);
+  }
+
+  .socials__item:hover .socials__item--svg {
+    stroke: var(--Primary, #ff4646);
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  .contact__item:hover {
+    cursor: pointer;
+    color: var(--Primary, #ff4646);
+  }
+
+  .contact__item:hover .contact__link,
+  .contact__item:hover .contact__text {
+    color: var(--Primary, #ff4646);
+  }
+
+  .footer__text--link:hover {
+    cursor: pointer;
+    color: var(--Primary, #ff4646);
+  }
+
+  .footer__text:hover {
+    color: var(--Primary, #ff4646);
+  }
+
+  .cta__button:hover {
+    cursor: pointer;
+    color: var(--dark);
+    background: var(--Static-White, #fff);
+  }
 }

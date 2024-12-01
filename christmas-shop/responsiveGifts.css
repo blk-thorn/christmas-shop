@@ -133,7 +133,7 @@
     max-width: 100%;
     height: 100%;
     row-gap: 8px;
-    padding-top: 180px;
+    /* padding-top: 180px; */
     padding-bottom: 40px;
     background: var(--Static-White, #fff);
     align-items: center;
@@ -145,15 +145,14 @@
 
   .menu__list--active {
     padding-top: 36.5%;
-    top: 64px;
+    top: 53px;
     width: 100%;
     transform: translateX(0);
     opacity: 1;
-    z-index: 1;
     justify-content: center;
     align-items: center;
     /* height: 100vh; */
-    z-index: 2;
+    z-index: 5;
   }
 
   .menu__item {
@@ -167,6 +166,10 @@
     line-height: 152%; /* 36.48px */
     letter-spacing: 3.84px;
     text-transform: uppercase;
+  }
+
+  .menu__item:first-child {
+    cursor: not-allowed;
   }
 
   .contact__list {

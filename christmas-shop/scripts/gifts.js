@@ -74,12 +74,17 @@ renderCards().then(cards => {
 });
 
 
+window.onload = () => {
+    const firstGiftItem = document.querySelector(".gifts__item");
+    firstGiftItem.classList.add("gifts__item--active");
+}
+
+
     giftsList.addEventListener("click", (event) => {
 
         const liElement = event.target.closest('LI');
         const filterClass = document.querySelectorAll(".card__item");
         const giftsItem = document.querySelectorAll(".gifts__item");
-       
 
         
         if(!liElement) return;
@@ -88,6 +93,7 @@ renderCards().then(cards => {
             element.classList.remove("gifts__item--active");
         });
         liElement.classList.add("gifts__item--active");
+       
         
         filterClass.forEach(element => {
             element.classList.remove("hide");

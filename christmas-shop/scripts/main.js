@@ -86,14 +86,14 @@ function updateMoveSlider() {
 	function moveSlides() {
 		
 		if (counter < 0) {
-			counter = 0; // Не позволяем уходить за пределы влево
+			counter = 0; // Не даем уходить влево
 		}
 		if (counter >= slides.length) {
-			counter = slides.length - 1; // Не позволяем уходить за пределы вправо
+			counter = slides.length - 1;
 		}
 	
 		// Перед пересчётом slideTransform запрашиваем актуальное значение moveSlider
-		const visibleArea = sliderWrapper.clientWidth; // Обновляем значение for visibleArea
+		const visibleArea = sliderWrapper.clientWidth;
 		const stepSize = slider.scrollWidth - visibleArea; 
 
 		let steps = window.innerWidth > 768 ? 3 : (window.innerWidth >= 380 ? 6 : slides.length);
@@ -140,7 +140,7 @@ leftBtn.addEventListener("click", () => {
 window.onresize = () => {
 	
     counter = 0;      // Сброс счетчика
-    updateMoveSlider(); // Обновляем шаги
+    updateMoveSlider();
     moveSlides(); 
 };
 

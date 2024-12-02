@@ -181,7 +181,8 @@
   }
 
   .copyright {
-    line-height: 280%;
+    /* line-height: 280%; */
+    line-height: 258%;
   }
 }
 

@@ -57,7 +57,7 @@ renderCards().then(cards => {
                    const name = modalBtnElement.dataset.modalBtn;
        
                    if (!isModalOpen) {
-                       createModal(newArr[index], name); // Передаем имя для создания модального окна
+                       createModal(newArr[index], name); // Передаем имя для модального окна
                        body.classList.add("no-scroll");
                    } else {
                        console.log("Modal is opened");

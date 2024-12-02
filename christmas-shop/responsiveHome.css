@@ -141,7 +141,7 @@
       var(--primary);
   }
   .best-gifts__inner {
-    padding: 61px 0px 60px 0px;
+    padding: 58px 0px 60px 0px;
   }
 
   .slider__inner {
@@ -420,7 +420,8 @@
   }
 
   .best-gifts__inner {
-    padding: 61.5px 0px 60px 0px;
+    /* padding: 61.5px 0px 60px 0px; */
+    padding: 58.5px 0px 60px 0px;
   }
 
   .slider {

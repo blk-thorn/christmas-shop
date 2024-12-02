@@ -144,7 +144,7 @@
   }
 
   .menu__list--active {
-    padding-top: 36.5%;
+    /* padding-top: 36.5%; */
     top: 53px;
     width: 100%;
     transform: translateX(0);
@@ -241,7 +241,7 @@
     text-transform: uppercase;
   }
 
-  .gifts__item:nth-child(1) {
+  /* .gifts__item:nth-child(1) {
     display: flex;
     padding: var(--Space-12, 12px) var(--Space-8, 8px);
     justify-content: center;
@@ -249,15 +249,15 @@
     gap: var(--Space-0, 0px);
     color: var(--Static-White, #fff);
 
-    /* Action Small */
+
     font-family: "Montserrat";
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: 130%; /* 15.6px */
+    line-height: 130%;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-  }
+  } */
 
   .contact__list {
     flex-direction: column;

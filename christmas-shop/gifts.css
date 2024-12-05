@@ -244,18 +244,7 @@ body {
   text-transform: uppercase;
 }
 
-/* .gifts__item:hover {
-  cursor: pointer;
-  background: var(--static-white-20);
-  color: var(--static-white);
-}*/
-
-/* .gifts__item:nth-child(1):hover {
-  cursor: default;
-} */
-
 .card__list {
-  /* position: relative; */
   display: flex;
   padding: 0.5px 0px;
   justify-content: center;
@@ -270,9 +259,9 @@ body {
   position: fixed;
   display: flex;
   align-self: flex-start;
-  top: 50%;
+  top: 99%;
   right: 0;
-  transform: translateY(-50%);
+  transform: translateY(-99%);
 
   width: 56px;
   height: 56px;
@@ -302,14 +291,6 @@ body {
   border-radius: 20px;
   background: var(--content-background);
 }
-
-/* .card__item:hover {
-  cursor: pointer;
-}
-
-.card__item:hover .card__title {
-  color: var(--primary);
-} */
 
 .image__container {
   max-height: 230px;
@@ -368,7 +349,6 @@ body {
   display: flex;
   flex-direction: column;
   position: fixed;
-  /* display:flex; */
   align-items: center;
   justify-content: center;
   top: 50%;
@@ -422,10 +402,6 @@ body {
   transition: stroke 0.3s ease-in-out;
 }
 
-/* .modal__button:hover .modal__button-path {
-  stroke: var(--primary);
-} */
-
 .modal__list {
   display: flex;
   flex-direction: column;
@@ -442,10 +418,6 @@ body {
   gap: var(--Space-12, 12px);
   align-self: stretch;
 }
-
-/* .modal__card:hover .card__title {
-  color: var(--primary);
-} */
 
 .modal__text {
   flex: 1 0 0;
@@ -535,16 +507,6 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
-/* .contact__item:hover {
-  cursor: pointer;
-  color: var(--primary);
-}*/
-
-/* .contact__item:hover .contact__link,
-.contact__item:hover .contact__text {
-  color: var(--primary);
-}*/
-
 .contact__link {
   color: var(--dark);
   text-align: center;
@@ -610,7 +572,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 280%;
+  line-height: 270%;
   /* line-height: 300%; */
 }
 

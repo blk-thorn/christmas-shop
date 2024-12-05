@@ -76,7 +76,7 @@
     width: 21px;
     height: 2px;
     top: calc(60% - 1px);
-    background-color: var(--dark, #181c29);
+    background-color: var(--dark);
     transition: all 0.3s ease-in-out;
     z-index: 50;
   }

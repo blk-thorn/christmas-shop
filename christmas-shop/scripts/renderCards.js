@@ -34,7 +34,7 @@ renderCards().then(cards => {
 
     shuffleArray(cards);
 
-    const newArr = cards.slice(0, 4).map((card, index) => {
+    const newArr = cards.slice(0, 4).map((card, index) => { 
         createCard(card, index);
         return card;
     });

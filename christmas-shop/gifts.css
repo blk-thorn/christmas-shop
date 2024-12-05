@@ -253,9 +253,9 @@ body {
   position: fixed;
   display: flex;
   align-self: flex-start;
-  top: 100%;
+  top: 99%;
   right: 0;
-  transform: translateY(-100%);
+  transform: translateY(-99%);
 
   width: 56px;
   height: 56px;

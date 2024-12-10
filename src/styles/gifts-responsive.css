@@ -1,0 +1,222 @@
+@media (min-width: 769px) and (max-width: 1339px) {
+    .contact__link {
+        letter-spacing: 2.84px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .best-gifts__inner {
+        padding: var(--Space-60) var(--Space-0);
+    }
+
+    .scroll-top {
+        right: 0.5%;
+    }
+}
+
+@media (min-width: 380px) and (max-width: 768px) {
+    .header {
+        padding: var(--Space-0) var(--Space-8);
+    }
+
+    .menu__list {
+        display: none;
+    }
+
+    .stop-scroll {
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+    }
+
+    .burger {
+        display: flex;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        padding: var(--Space-0);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--Space-8);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        z-index: 50;
+    }
+
+    .burger__line {
+        display: block;
+        position: absolute;
+        width: 21px;
+        height: 2px;
+        top: calc(60% - 1px);
+        background-color: var(--dark);
+        transition: all 0.3s ease-in-out;
+        z-index: 50;
+    }
+
+    .burger__line--active {
+        transform: rotate(45deg);
+        transition: all 0.3s ease-in-out;
+        top: 15px;
+        z-index: 50;
+    }
+
+    .burger::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 21px;
+        height: 2px;
+        left: 9.5px;
+        top: calc(40% - 1px);
+        background-color: var(--dark);
+        transition: all 0.3s ease-in-out;
+        z-index: 5;
+    }
+
+    .burger--active::before {
+        transform: rotate(-45deg);
+        transition: all 0.3s ease-in-out;
+        top: 15px;
+        z-index: 5;
+    }
+
+    .header,
+    .footer {
+        max-width: 768px;
+        width: 100vw;
+    }
+
+    .menu__list {
+        position: fixed;
+        display: flex;
+        top: 64px;
+        right: 0;
+        flex-direction: column;
+        max-width: 100%;
+        height: 100%;
+        row-gap: var(--Space-8);
+        padding-bottom: 40px;
+        background: var(--static-white);
+        align-items: center;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    .menu__list--active {
+        top: 53px;
+        width: 100%;
+        transform: translateX(0);
+        opacity: 1;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+    }
+
+    .menu__item {
+        color: var(--dark);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 152%;
+        letter-spacing: 3.84px;
+        text-transform: uppercase;
+    }
+
+    .menu__item:first-child {
+        cursor: not-allowed;
+    }
+
+    .copyright {
+        line-height: 258%;
+    }
+}
+
+@media (min-width: 381px) and (max-width: 768px) {
+    .gifts {
+        background: url(../assets/img/bg-garland.png) top center / 48.6rem no-repeat,
+        var(--primary);
+    }
+
+    .gifts__list {
+        gap: clamp(0rem, -0.4922rem + 2.0672vw, 0.5rem);
+    }
+
+    .gifts__item {
+        text-wrap: nowrap;
+        padding: var(--Space-12) clamp(0.5rem, -0.2384rem + 3.1008vw, 1.25rem);
+    }
+}
+
+@media (min-width: 160px) and (max-width: 380px) {
+    .header {
+        padding: var(--Space-0) 8px;
+    }
+
+    .menu__list {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        padding: var(--Space-0);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--Space-8);
+        cursor: pointer;
+    }
+
+    .burger__line {
+        display: inline-block;
+        position: absolute;
+        width: 21px;
+        height: 2px;
+        left: 9.5px;
+        top: 15px;
+        background-color: var(--dark);
+    }
+
+    .burger::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 21px;
+        height: 2px;
+        left: 9.5px;
+        top: calc(60% - 1px);
+        background-color: var(--dark);
+    }
+
+    .gifts {
+        background: url(../assets/img/bg-garland.png) top center / 23.9rem no-repeat,
+        var(--primary);
+    }
+
+    .gifts__list {
+        gap: var(--Space-0);
+    }
+
+    .gifts__item {
+        text-wrap: nowrap;
+        display: flex;
+        padding: var(--Space-12) clamp(0.125rem, -0.1477rem + 2.7273vw, 0.5rem);
+        justify-content: center;
+        align-items: center;
+        gap: var(--Space-0);
+        color: var(--static-white);
+        font-size: clamp(0.5rem, 0.3182rem + 1.8182vw, 0.75rem);
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+    }
+
+    .modal__card {
+        width: 22.75rem;
+    }
+}

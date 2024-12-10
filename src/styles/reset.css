@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    border: none;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+img,
+video,
+canvas {
+    overflow: clip;
+}
